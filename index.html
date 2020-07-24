@@ -32,14 +32,14 @@
         h1{
 
             color:white;
-            font-family:'fp-1998', sans-serif;
+            font-family:'fp-1998';
             font-size:8vw;
             letter-spacing: 20px;
 
         }
         h3{
           color:white;
-          font-family:'fp-1998', sans-serif;
+          font-family:'fp-1998';
           font-size:3vw;
           letter-spacing: 14px;
           text-transform: uppercase;
@@ -54,6 +54,75 @@
         }
 
 
+
+        p{
+          margin-left: 10%;
+          margin-top: 100px;
+          color:white;
+          font-family:sans-serif;
+          font-size: 1.4vw;
+          width:80%;
+        }
+        p.week-para{
+          margin-top: 200px;
+          width:80%;
+          margin-left: 10%;
+        }
+        i#sat{
+          float:left;
+          padding-right: 15px;
+
+        }
+        h2{
+          color:white;
+          font-family:'fp-1998';
+          font-size:4vw;
+          letter-spacing: 14px;
+          text-transform: uppercase;
+          margin-left: 15%;
+
+
+        }
+        h3#dtb{
+          margin-left: 10%;
+
+        }
+        h3#ml{
+          margin-left: 10%;
+
+        }
+
+
+        .column {
+
+          float: left;
+          width: 45%;
+          padding: 15px;
+        }
+
+        .row:after {
+          content: "";
+          display: table;
+          clear: both;
+        }
+        img{
+          width:80%;
+          z-index: 1;
+          margin-left:10%;
+          opacity: 0.4;
+        }
+        img.thirdpic, img.fourthpic, img.sixthpic, img.ninthpic{
+          opacity: 0.5;
+        }
+        img.thirdpic, img.fourthpic, img.sixthpic{
+          filter: grayscale(100%);
+        }
+        img.octocatpic, img.eleventhpic{
+          width:60%;
+           opacity: 1;
+        }
+
+
         ul{
           list-style-type: none;
           margin: 0;
@@ -63,19 +132,9 @@
           position: -webkit-sticky; /* Safari */
           position: sticky;
           top: 0;
-
           margin-bottom: 50px;
-          z-index: 2;
+          z-index: 3;
         }
-        ul.contents{
-
-          padding: 20px;
-          color:white;
-
-          font-family:"fp-1998";
-          font-size:80px;
-        }
-
         li {
 
           float: left;
@@ -98,65 +157,141 @@
         }
         ul.contents{
           z-index: 1;
+          padding: 20px;
+          margin-left: 5%;
+          color:white;
+          font-family:"fp-1998";
+          font-size:3em;
         }
         ul.contents a{
-
-          padding: 20px;
-          color:white;
-          margin-left: 10%;
-          font-family:"fp-1998", sans-serif;
-          font-size:1em;
+          font-size:2em;
           z-index: 1;
         }
         ul.contents a:hover {
           background-color: cornflowerblue;
           color:hotpink;
         }
-        p{
-          margin-left: 10%;
-          color:white;
-          font-family:sans-serif;
-          font-size: 1.4vw;
-          width:80%;
+        div.shining{
+          z-index: 1;
+          position:relative;
+          opacity:0.7;
         }
-        p.week-para{
-          margin-top: 150px;
-          width:80%;
-          margin-left: 10%;
-        }
-        i#sat{
-          float:left;
-          padding-right: 15px;
+        div.shiningicons{
+          position:absolute;
+          left:69%;
+          top:10%;
+          width: 5%;
+          font-size:4em;
+          z-index: 2;
+
+          opacity: 0.2;
 
         }
-        h2{
-          color:white;
-          font-family:'fp-1998', sans-serif;
-          font-size:4vw;
-          letter-spacing: 14px;
-          text-transform: uppercase;
+
+        div.shiningicons a {
+
+          color: midnightblue;
+        }
+        div.shiningicons a:hover {
+          color: white;
+        }
+
+        div.b {
+        font-family: "fp-1998";
+        font-size: 4vw;
+        width: 120px;
+        height: 150px;
+        position: absolute;
+        z-index: 2;
+        right:125%;
+        bottom:5%;
+
+        color:midnightblue;
+
+        transition: font-size 2s;
+        -ms-transform: skewY(30deg); /* IE 9 */
+        transform: skewY(30deg);
+        }
+        div.b:hover {
+        font-size: 170px;
+        color:darkred;
+
+        }
+        a#icon2{
           margin-left: 15%;
-
-
         }
-        h3#dtb{
-          font-size:4vw;  
+        a#icon4{
           margin-left: 10%;
+        }
+        a#icon5{
+          margin-left: 10%;
+        }
+        @media screen and (max-width:1800px) {
+          body{
+            background-color: orange;
+          }
+          .header{
+            background-color: orange;
+          }
+          div.b {
+            right:110%;
+          }
 
         }
+        @media screen and (max-width:1600px) {
+          body{
+            background-color: slateblue;
+          }
+          .header{
+            background-color: slateblue;
+          }
+          div.shiningicons{
+            font-size:3.5em;
 
-        .column {
+          }
+          div.b {
+            right:95%;
+            top:60%;
+          }
 
-          float: left;
-          width: 45%;
-          padding: 15px;
+        }
+        @media screen and (max-width:1400px) {
+          body{
+            background-color: turquoise;
+          }
+          .header{
+            background-color: turquoise;
+          }
+          div.shiningicons{
+            font-size:3em;
+
+          }
+          div.b {
+            right:65%;
+            top:60%;
+          }
+
+        }
+        @media screen and (max-width:1300px) {
+          body{
+            background-color: plum;
+          }
+          .header{
+            background-color: plum;
+          }
+          div.shiningicons{
+            font-size:3em;
+
+          }
+          div.b {
+            right:60%;
+            top:60%;
+          }
         }
 
-        .row:after {
-          content: "";
-          display: table;
-          clear: both;
-        }
+
+
+
 
         @media screen and (max-width:1200px) {
           .column {
@@ -188,7 +323,7 @@
              color: hotpink;
 
            }
-           ul.contents a:hover , ul.contents a:active , ul.contents a:focus {
+           ul.contents a:hover {
              color:orange;
              background-color: purple;
 
@@ -206,23 +341,37 @@
              width:40%;
              opacity: 0.2;
            }
-           img.octocatpic, img.ninthpic, img.fifthpic{
-               opacity:1;}
-            
-        }
+           img.fifthpic{
+             opacity:1;
+           }
+           div.shiningicons{
+             font-size:2.5em;
 
-        img{
-          width:80%;
-          z-index: 1;
-          margin-left:10%;
-          opacity: 0.4;
+           }
+           div.b {
+             right:100%;
+             top:65%;
+             width: 80px;
+           }
         }
-        img.thirdpic, img.fourthpic, img.sixthpic, img.sixthpic{
-          filter: grayscale(100%);
-        }
-        img.octocatpic, img.ninthpic, img.fifthpic{
-          filter: invert(100%);
-        }    
+          @media screen and (max-width:1000px) {
+            body{
+              background-color: yellow;
+            }
+            .header{
+              background-color: yellow;
+            }
+            div.shiningicons{
+              font-size:2em;
+
+            }
+            div.b {
+              right:80%;
+              top:65%;
+            }
+          }
+
+
 
         </style>
         </head>
@@ -249,6 +398,8 @@
         fresh in my mind but I'll try my best nonetheless. </p>
         </div>
         </div>
+
+
         <div class="row">
         <div class="column">
         <h3 id="dtb"class="contents">CONTENTS<i class="fas fa-database fa-1x"></i></h3>
@@ -268,6 +419,30 @@
           </ul>
         </div>
         </div>
+
+
+        <h3 id="ml">MUSIC LINKS<i class="fas fa-satellite fa-1x"></i><i class="fas fa-headphones fa-1x"></i></h3>
+        <div class="shining">
+
+        <div class="shiningicons">
+
+            <a id="icon1"target="_blank" href="https://www.youtube.com/watch?v=fooWYRUcx9E&list=PLoVQSPhAgWlfjfADp0abB5nAUMG0gl-gK&index=3"><i class="fas fa-mountain"></i></a>
+            <a id="icon2"target="_blank" href="https://www.youtube.com/watch?v=ma8QZuIe5BI&list=PLoVQSPhAgWlfjfADp0abB5nAUMG0gl-gK&index=4"><i class="fas fa-ghost"></i></a>
+            <a id="icon3"target="_blank" href="https://www.youtube.com/watch?v=6ONu9uumvyA&list=RDOUdX-9wQ1sk&index=2"><i class="fas fa-broadcast-tower"></i></a>
+            <a id="icon4"target="_blank" href="https://www.youtube.com/watch?v=OUdX-9wQ1sk&list=RDOUdX-9wQ1sk&index=1"><i class="fas fa-dice-d6"></i></a>
+            <a id="icon5"target="_blank" href="https://www.youtube.com/watch?v=cONv26K0vL8&t=330s"><i class="fas fa-barcode"></i></a>
+            <a id="icon6"target="_blank" href="https://www.youtube.com/watch?v=cONv26K0vL8&t=330s"><i class="fas fa-pastafarianism"></i></a>
+
+        <div class="b">RED RUM!</div>
+
+        </div>
+
+        <img id="shining_pic" src= "https://media.boingboing.net/wp-content/uploads/2018/07/the-shining-carpet-corridor-danny-600435-1.jpg" alt="picture from The Shining movie">
+        </div>
+
+
+
+
         <div class="row">
         <div class="column">
         <h2 id= "week-one">16/4/20</h2>
@@ -294,7 +469,7 @@
         <img class="thirdpic"src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Apple_II_typical_configuration_1977.png/800px-Apple_II_typical_configuration_1977.png"alt="old apple computer">
         </div>
         <div class="column">
-        <p class="week-para"><i id="sat"class="fas fa-satellite-dish fa-4x"></i>Been learning about using
+        <p class="week-para"><i id="sat"class="fas fa-satellite-dish fa-4x" style="color: hotpink;"></i>Been learning about using
           nested loops to print 1 image repeatedly across screen. One task was Building a house with
           nested loops and images from library. House looked awful. Oh well... </p>
         </div>
@@ -305,7 +480,7 @@
         <img class="fourthpic"src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Trinity77.jpg/1280px-Trinity77.jpg"alt="three old computers">
         </div>
         <div class="column">
-        <p class="week-para"><i id="sat"class="fas fa-meteor fa-4x" style="color: orange;"></i>I've finished Intro to JS! My last bunch of lessons were a 'Make it Rain' project,
+        <p class="week-para"><i id="sat"class="fas fa-meteor fa-4x" style="color: hotpink;"></i>I've finished Intro to JS! My last bunch of lessons were a 'Make it Rain' project,
           a 'Bookshelf' project using an Array of Objects and loops(did a really good nested loop on this, felt very pleased with myself!)and learning about Object-Orientated Design.
           Started getting a bit confused with the last one, but think I'll figure it out soon. So far, JS seems to have the almost the same rules as Python, which is great. Before I move onto Unit 2,
           "Intro to HTML/CSS", I'm going to practice my newly acquired JS skills a little bit more. I wanted to do a version of classic Nokia game Snake, but with a tweek. When you make a shape in
@@ -334,7 +509,7 @@
         <img class="sixthpic"src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Soviet_electronics_in_the_1980s.JPEG/1024px-Soviet_electronics_in_the_1980s.JPEG"alt="soviet computer shop">
         </div>
         <div class="column">
-        <p class="week-para"><i id="sat"class="fas fa-satellite-dish fa-4x" style="color: orange;"></i>I've finished my Snake game! The code for a Snake game is actually more complicated
+        <p class="week-para"><i id="sat"class="fas fa-satellite-dish fa-4x" style="color: hotpink;"></i>I've finished my Snake game! The code for a Snake game is actually more complicated
           then you might think. The complex bit is that you have to make an array that tracks and
           continously updates Snake's current position and it's previous position, and then draws the snake based on this. Every time the snake eats something, the array gets bigger and draws a bigger snake. You can adjust array size to change the size of Snake. If you make the array size begin as 1 space, at the start you get a 1 square sized snake. If it's 10 spaces, the snakes is 10 squares.<br>Anyway, to make my multicolor Snake I had to change the code. In my version, instead of the whole background being redrawn every frame, it only redraws the background at the last
           position in the snake array.   </p>
@@ -368,7 +543,7 @@
         <img class="ninthpic"src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/%D0%9A%D0%BE%D0%BC%D0%BF%D1%8C%D1%8E%D1%82%D0%B5%D1%80_%D0%91%D0%9A0010_%D1%84%D0%BE%D1%82%D0%BE3.JPG/800px-%D0%9A%D0%BE%D0%BC%D0%BF%D1%8C%D1%8E%D1%82%D0%B5%D1%80_%D0%91%D0%9A0010_%D1%84%D0%BE%D1%82%D0%BE3.JPG"alt="soviet computer">
         </div>
         <div class="column">
-        <p class="week-para"><i id="sat"class="fas fa-tablet-alt fa-4x" style="color: orange;"></i>This week I started THIS BLOG!!!</p>
+        <p class="week-para"><i id="sat"class="fas fa-tablet-alt fa-4x" style="color: hotpink;"></i>This week I started THIS BLOG!!!</p>
         </div>
         </div>
         <div class="row">
@@ -377,7 +552,7 @@
         <img class="octocatpic" src="https://github-atom-io-herokuapp-com.freetls.fastly.net/assets/index-octonaut-8ece2623b8966578e2414c89b7b7190cb56339d1f8b7d260adf62110ce9f39c4.svg"alt="octocat">
         </div>
         <div class="column">
-        <p class="week-para"><i id="sat"class="fas fa-keyboard fa-4x" style="color: orange;"></i>I'm three weeks late doing this post. No reason. Just lazy. Anyway I've spent the last
+        <p class="week-para"><i id="sat"class="fas fa-keyboard fa-4x" style="color: hotpink;"></i>I'm three weeks late doing this post. No reason. Just lazy. Anyway I've spent the last
           few weeks doing HTML/CSS. It took around 8 days to complete the Unit 2 HTML/CSS course.
           I spent the following time practicing my new web design skills. I've done quite a lot
           actually. I now have a actual online website hosted by GitHub (this website!) and I've
