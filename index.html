@@ -6,6 +6,8 @@
         <head>
         <!-- Place your kit's code here -->
         <script src="https://kit.fontawesome.com/c818ba25ab.js" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/p5@1.1.4/lib/p5.min.js"></script>
+        <script type="text/javascript" src="icon-clock.js"></script>
         <head>
         <style>
         @font-face {
@@ -32,14 +34,14 @@
         h1{
 
             color:white;
-            font-family:'fp-1998',sans-serif;
+            font-family:'fp-1998';
             font-size:8vw;
             letter-spacing: 20px;
 
         }
         h3{
           color:white;
-          font-family:'fp-1998',sans-serif;
+          font-family:'fp-1998';
           font-size:3vw;
           letter-spacing: 14px;
           text-transform: uppercase;
@@ -73,14 +75,20 @@
           padding-right: 15px;
 
         }
+
         h2{
           color:white;
-          font-family:'fp-1998',sans-serif;
+          font-family:'fp-1998';
           font-size:4vw;
           letter-spacing: 14px;
           text-transform: uppercase;
           margin-left: 15%;
 
+
+        }
+        h2#HC{
+          margin-left: 0%;
+          text-align: center;
 
         }
         h3#dtb{
@@ -109,24 +117,30 @@
           width:80%;
           z-index: 1;
           margin-left:10%;
-          
+
         }
         img#shining_pic{
           filter: grayscale(100%);
 
-        }    
-        img.firstpic, img.secondpic, img.thirdpic, img.fourthpic, img.sixthpic, img.seventhpic{
+        }
+        img.firstpic, img.secondpic, img.thirdpic, img.fourthpic, img.sixthpic, img.seventhpic, img.fourteenthpic{
           opacity:0.6;
 
         }
-        img.thirdpic, img.fourthpic, img.sixthpic{
+        img.thirdpic, img.fourthpic, img.sixthpic, img.twelfthpic,  img.thirteenthpic, img.fourteenthpic, img.fifthteenthpic, img.sixthteenthpic{
           filter: grayscale(100%);
         }
-        img.octocatpic, img.eleventhpic{
+        img.octocatpic, img.twelfthpicb{
           width:60%;
-           
-        }
 
+        }
+        img.twelfthpic, img.thirteenthpic, img.fifthteenthpic, img.sixthteenthpic{
+          opacity: 0.6;
+        }
+        img.eleventhpic{
+          width:80%;
+
+        }
 
         ul{
           list-style-type: none;
@@ -165,7 +179,7 @@
           padding: 20px;
           margin-left: 5%;
           color:white;
-          font-family:"fp-1998",sans-serif;
+          font-family:"fp-1998";
           font-size:3em;
         }
         ul.contents a{
@@ -175,6 +189,9 @@
         ul.contents a:hover {
           background-color: cornflowerblue;
           color:hotpink;
+        }
+        div#sketch-holder{
+          margin-bottom: 250px;
         }
         div.shining{
           z-index: 1;
@@ -202,7 +219,7 @@
         }
 
         div.b {
-        font-family: "fp-1998",sans-serif;
+        font-family: "fp-1998";
         font-size: 4vw;
         width: 120px;
         height: 150px;
@@ -223,20 +240,23 @@
 
         }
         a#icon2{
-          margin-left: 15%;
+          margin-left: 5%;
         }
         a#icon4{
-          margin-left: 10%;
+          margin-left: 5%;
         }
-        a#icon5{
-          margin-left: 10%;
+        a#icon6{
+          margin-left: 15%;
         }
         @media screen and (max-width:1800px) {
           body{
-            background-color: green;
+            background-color: orange;
           }
           .header{
-            background-color: green;
+            background-color: orange;
+          }
+          ul{
+            background-color:orange;
           }
           div.b {
             right:110%;
@@ -250,11 +270,13 @@
           .header{
             background-color: slateblue;
           }
+          ul{
+            background-color:slateblue;
+          }
           div.shiningicons{
             font-size:3.5em;
 
           }
-            
           div.b {
             right:95%;
             top:60%;
@@ -263,10 +285,13 @@
         }
         @media screen and (max-width:1400px) {
           body{
-            background-color: turquoise;
+            background-color: plum;
           }
           .header{
-            background-color: turquoise;
+            background-color: plum;
+          }
+          ul{
+            background-color:plum;
           }
           div.shiningicons{
             font-size:3em;
@@ -279,13 +304,14 @@
 
         }
         @media screen and (max-width:1300px) {
-          body{
-            background-color: orange;
+          body, .header, ul{
+            background-color: turquoise;
           }
-          .header{
-            background-color: orange;
+
+          h1, h2, h3, p, p.week-para, ul.contents a ,li a {
+            color:cornflowerblue;
           }
-            
+
           div.shiningicons{
             font-size:3em;
 
@@ -342,15 +368,15 @@
            p.week-para{
              margin-top: 5px;
              color:hotpink;
-               
 
            }
-           
-           img.fifthpic, img.thirdpic, img.octocatpic, img.eleventhpic, img.ninthpic{
+           img.fifthpic, img.thirdpic, img.octocatpic, img.eleventhpic, img.ninthpic, img.twelfthpic, img.twelfthpicb{
              width:40%;
-             
+
            }
-           
+           img.fifthpic{
+             opacity:1;
+           }
            div.shiningicons{
              font-size:2.5em;
 
@@ -368,6 +394,7 @@
             .header{
               background-color: purple;
             }
+
             div.shiningicons{
               font-size:2em;
 
@@ -381,10 +408,13 @@
 
 
         </style>
+        <head>
+          
         </head>
         <body>
 
         <div class="header">
+          
           <h1 id="home">PANDROZA'S BLOG</h1>
           <h3>learning to code from scratch</h3>
         </div>
@@ -402,7 +432,12 @@
         June 11 2020. This blog dates back to 16 April, when I started Khan
         Academy's Computer Programming course and is written retrospectively.
         Ideally I'd have written these posts when they happened, when things were
-        fresh in my mind but I'll try my best nonetheless. </p>
+        fresh in my mind but I'll try my best nonetheless. There are 7 courses,
+        in this order:<br><br>Intro into JS: Drawing and Animation.<br><br>Intro into
+        HTML/CSS: Making webpages.<br><br>Intro into SQL: Querying and managing data.
+        <br><br>Advanced JS: Games and visualizations:<br><br>Advanced JS: Natural Simulations.
+        <br><br>HTML/JS: Making webpages interactive.<br><br>HTML/JS: Making webpages interactive
+        with jQuery.<br> </p>
         </div>
         </div>
 
@@ -433,14 +468,14 @@
 
         <div class="shiningicons">
 
-            <a id="icon1"target="_blank" href="https://www.youtube.com/watch?v=fooWYRUcx9E&list=PLoVQSPhAgWlfjfADp0abB5nAUMG0gl-gK&index=3"><i class="fas fa-mountain"></i></a>
-            <a id="icon2"target="_blank" href="https://www.youtube.com/watch?v=ma8QZuIe5BI&list=PLoVQSPhAgWlfjfADp0abB5nAUMG0gl-gK&index=4"><i class="fas fa-ghost"></i></a>
-            <a id="icon3"target="_blank" href="https://www.youtube.com/watch?v=6ONu9uumvyA&list=RDOUdX-9wQ1sk&index=2"><i class="fas fa-broadcast-tower"></i></a>
-            <a id="icon4"target="_blank" href="https://www.youtube.com/watch?v=OUdX-9wQ1sk&list=RDOUdX-9wQ1sk&index=1"><i class="fas fa-dice-d6"></i></a>
-            <a id="icon5"target="_blank" href="https://www.youtube.com/watch?v=cONv26K0vL8&t=330s"><i class="fas fa-barcode"></i></a>
-            <a id="icon6"target="_blank" href="https://www.youtube.com/watch?v=cONv26K0vL8&t=330s"><i class="fas fa-pastafarianism"></i></a>
+            <a id="icon1"target="_blank" href="https://www.youtube.com/watch?v=fooWYRUcx9E&list=PLoVQSPhAgWlfjfADp0abB5nAUMG0gl-gK&index=3"><i class="fas fa-headphones"></i></a>
+            <a id="icon2"target="_blank" href="https://www.youtube.com/watch?v=ma8QZuIe5BI&list=PLoVQSPhAgWlfjfADp0abB5nAUMG0gl-gK&index=4"><i class="fas fa-guitar"></i></a>
+            <a id="icon3"target="_blank" href="https://www.youtube.com/watch?v=6ONu9uumvyA&list=RDOUdX-9wQ1sk&index=2"><i class="fas fa-drum"></i></a>
+            <a id="icon4"target="_blank" href="https://www.youtube.com/watch?v=OUdX-9wQ1sk&list=RDOUdX-9wQ1sk&index=1"><i class="fas fa-headphones-alt"></i></a>
+            <a id="icon5"target="_blank" href="https://www.youtube.com/watch?v=cONv26K0vL8&t=330s"><i class="fas fa-drum-steelpan"></i></a>
+            <a id="icon6"target="_blank" href="https://www.youtube.com/watch?v=cONv26K0vL8&t=330s"><i class="fas fa-microphone"></i></a>
 
-        
+        <div class="b">RED RUM!</div>
 
         </div>
 
@@ -456,7 +491,7 @@
         <img class="firstpic"src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Two_women_operating_ENIAC_%28full_resolution%29.jpg/800px-Two_women_operating_ENIAC_%28full_resolution%29.jpg"alt="old computer picture">
         </div>
         <div class="column">
-        <p class="week-para"><i id="sat"class="fas fa-satellite fa-4x"></i>Today I started Intro into JavaScript. I'm going to try and do all the Khan University "computer programming" courses one after another. There's around seven of them so it will take a few months (4-6, maybe). My goal is hopefully by the end of it i'll have learned JavaScript, HTML and CSS and can use them to make websites from scratch and make games and programs. I also want be able to download and use JS code from GitHub. I'll have more skills to add to my CV, as well.</p>
+        <p class="week-para"><i id="sat"class="fas fa-satellite fa-4x"></i>Today I started Intro into JavaScript. I'm going to try and do all the Khan University "computer programming" courses one after another. There's around seven of them so it will maybe take a few months (4-6, maybe). My goal is hopefully by the end of it i'll have learned JavaScript, HTML and CSS and can use them to make websites from scratch and make games and programs. I also want be able to download and use JS code from GitHub. I'll have more skills to add to my CV, as well.</p>
         </div>
         </div>
         <div class="row">
@@ -571,15 +606,15 @@
           when I tried to find today had mysteriously disappeared!<br><a target="_blank" href="http://www.csszengarden.com/">CSS Garden</a> is a
           site that seems a bit outdated but it's still good. Basically it's shows how you can make
           lots of different looking versions of the same site by only changing it's
-          CSS.<br><a target=="_blank" href="https://atom.io/">Atom</a> is a Desktop Editor I've been
-          using to write code in.<br>Finally, I've been using W3Schools for further HTML/CSS info.
+          CSS.<br><a target="_blank" href="https://atom.io/">Atom</a> is a Desktop Editor I've been
+          using to write code in.<br>Finally, I've been using <a target="_blank" href="https://www.w3schools.com/">W3Schools</a> for further HTML/CSS info.
           Theres loads of useful stuff on that.</p>
          </div>
          </div>
          <div class="row">
          <div class="column">
          <h2 id= "week-eleven">3/7/20</h2>
-         <img class="eleventhpic"src="https://www.tate.org.uk/art/images/work/T/T00/T00275_9.jpg"alt="rothko light red over black painting">
+         <img class="eleventhpic"src="https://www.alux.com/wp-content/uploads/2014/04/Most.Expensive.Mark_.Rothko.Paintings.in_.the_.World_paintngs-1280x720.jpg"alt="rothko light red over black painting">
          </div>
          <div class="column">
          <p class="week-para"><i id="sat"class="fas fa-memory fa-4x" style="color: hotpink;"></i>Been using W3School this week to learn more HTML/CSS, like
@@ -590,7 +625,180 @@
            but eventually it started stressing me out so I quit!</p>
          </div>
          </div>
+         <div class="row">
+         <div class="column">
+         <h2 id= "week-twelve">25/7/20</h2>
+         <img class="twelfthpic"src="https://preview.redd.it/zw4a074e49741.jpg?width=960&crop=smart&auto=webp&s=3c58c10591903ecfc067a707906aef623d64f899"alt="osbourne computer pic">
+         </div>
+
+         <div class="column">
+         <p class="week-para"><i id="sat"class="fas fa-memory fa-4x" style="color: hotpink;"></i>Another late post.
+           This might become a habit. I started the next Khan Academy course, Intro into SQL,
+           which is something I did last year on Kaggle. I didn't finish it, instead I found myself
+           going back to web design. First thing I did was discover a site called FontsAwesome.
+           This site contains useful and nice looking icons, just like this
+           one!<i id="twelveicon"class="fas fa-desktop fa-1x" style="color: lightgreen;"></i> They look great and I've found myself wanting to use as many as possible. Secondly,
+           I've been trying to design a site based around Mayor Of London posters which
+           I see alot where I am, like the one  <a target=="_blank" href="https://assets.publishing.service.gov.uk/media/5ebaf037e90e070832346573/fig26.jpg">linked here.</a> This pic is obviously about
+           coronavirus and reminds me of New Orders Factory 51 posters. They aren't really
+           supposed to be adverts but Public Information notices and come across as
+           minimalist and containing no design. I did some sites based on this and other
+           posters with some FontsAwesome icons and they turned out quite good.</p>
+         </div>
+         </div>
+
+         <div class="row">
+         <div class="column">
+         <h2 id= "week-thirteen">5/8/20</h2>
+         <img class="thirteenthpic"src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/LCM%2BL_Working_Apple_I.jpg/800px-LCM%2BL_Working_Apple_I.jpg"alt="apple 1 pic">
+         </div>
+
+         <div class="column">
+         <p class="week-para"><i id="sat"class="fas fa-kiwi-bird fa-4x" style="color: hotpink;"></i>Tried to find a Flappy Bird
+           related icon on FontsAwesome. They had a crow and a dove but I really liked this
+           kiwi bird one so I've used it instead. Anyway, I finished
+           Intro to SQL and I'm halfway through the next course, which is Advanced JS:
+           Games and Visualization. This is more challenging then the last two courses so
+           will probably take a little longer. The main task so far has been to make a 2D
+           side scroller based on the famed Vietnamese android game "Flappy Bird".
+           It's been a month or two since I was last coding in JS so it took a while to get
+           back into the swing of things but in the end I think I did well. My game is
+           called "Floaty Beaver" and is like Flappy Bird but instead of pipes you go
+           through floating gates. My inspired twist on the game is that you have to go through
+           them in different directions! At some point (when I've learn't how) I will put the
+           game on this site, along with my Technicolor Snake game. So now I know how to make 2D scroller games and will be making more in future. Also,
+           on YouTube I found a really good CSS video called <a target=="_blank" href="https://www.youtube.com/watch?v=qm0IfG1GyZU&t=6s">10 modern layouts in 1 line of CSS.</a>
+           This has really good codes for responsive web layouts ie; sites that adjust
+           themselves based on the screensize and I'm planning on trying them all.</p>
+         </div>
+         </div>
+
+         <div class="row">
+         <div class="column">
+         <h2 id= "week-fourteen">14/8/20</h2>
+         <img class="fourteenthpic"src="https://upload.wikimedia.org/wikipedia/commons/0/01/Altair_8800_Computer.jpg"alt="altair pic">
+         </div>
+
+         <div class="column">
+         <p class="week-para"><i id="sat"class="fas fa-dragon fa-4x" style="color: hotpink;"></i>This
+           week I've used this nice dragon icon. I've been trying to stay with a computer theme
+           but then I miss out on showing off all the other cool looking icons, so from now I'll
+           use all icons that look good! I'm still doing Advanced JS. The next task in it was
+           based on a Card Matching game, where you have to finds the pairs and the cards
+           are dealt randomly each game. I had to add extra code for a 2-player mode, a computer
+           opponent, choice of game size, card animation and other stuff. You'd think a simple
+           Card Matching game would be easy to code but this has been the most challenging task on
+           KA so far. The learning curve definitely goes up on Advanced JS. The hardest bit
+           was coding the computer opponent. I'm sometimes not sure if it's difficult because
+           it's genuinely hard or if it's just I'm not that clever and a smart person would
+           find it easy. Or whether the actual course is at fault. There were a few comments
+           complaining about the rise in difficulty. Oh well. I was able to do it. I set myself
+           the goal of doing everything without looking at other peoples codes and I managed to, so
+           I'm happy. I was surprised at some of the solutions I came up for things.  I guess the
+           whole things essentially a big puzzle to solve and I've always enjoyed puzzles. So
+           thing's are going well and hopefully it won't become too difficult for me.
+           </p>
+         </div>
+         </div>
+
+         <div class="row">
+         <div class="column">
+         <h2 id= "week-fifthteen">23/8/20</h2>
+         <img class="fifthteenthpic"src="https://3894a8e173f5f8870a41-c88208a08312eda3cf96a15131ffd631.ssl.cf1.rackcdn.com/apple-lisa1513180843387.jpeg"alt="apple lisa pic">
+         </div>
+
+         <div class="column">
+         <p class="week-para"><i id="sat"class="fas fa-snowplow fa-4x" style="color: hotpink;"></i>This
+           week a snowplow icon. I "plowed" through the rest of Advanced JS in about two days and now its finished.
+           The lessons were about Transformations, 3D graphics and coding outside KA. Transformations showed you how to use rotate, push and popMatrix and translate to move the x/y coordinates around. This was easy. The 3D graphics not so easy. The KA coding enviroment doesn't do 3D graphics well so the lesson for it was mostly reading material and you are advised to try it outside of KA. Also, to do 3D graphics requires knowing trigonometry. So it looks like i'll have to do some Math lessons. For coding outside KA it recommends <a target=="_blank" href="https://editor.p5js.org/">P5JS</a>, and also coding in your browser. It does not prepare you well for this and I've spent the last week trying to get stuff to work on P5JS. When you go on P5JS you'll find lots of syntax different to KA such as "let" used instead of "var". After a few days I found this video on <a target=="_blank" href="https://www.youtube.com/watch?v=q8SHaDQdul0">The Coding Train</a> that explained why. Its basically to do with KA's course being 5 years out of date. These has been one of many problems I've had. Even more difficult is trying to code in your browser. I've spent lots of hours frustrated trying to figure out how to do this, with limited success. Here's some <a target=="_blank" href="https://www.youtube.com/watch?v=UCHzlUiDD10&t=117s">Coding Train vids</a> about this too.</p>
+
+         </div>
+         </div>
+<div id = sketch-holder>
+<h2 id= "HC">HIEROGLYPH CLOCK</h2>  
+<script>
+ /* function preload() {
+  dragon = loadImage("icons/dragon-solid.svg");
+  kiwi = loadImage("icons/kiwi-bird-solid.svg");
+  crow = loadImage("icons/crow-solid.svg");
+  book = loadImage("icons/book-dead-solid.svg");
+  dungeon = loadImage("icons/dungeon-solid.svg");
+  eye = loadImage("icons/eye-regular.svg");
+  ghost = loadImage("icons/ghost-solid.svg");
+  meteor = loadImage("icons/meteor-solid.svg");
+  pastafar = loadImage("icons/pastafarianism-solid.svg");
+  ying = loadImage("icons/yin-yang-solid.svg");
+}
+var cnv;
+
+function centerCanvas() {
+  var x = (windowWidth - width) / 2;
+  //var y = (windowHeight - height) / 2;
+  cnv.position(x);
+}
+function setup() {
+  background(0);
+  canvasSize = 500
+  cnv = createCanvas(canvasSize, canvasSize*2/5);
+  centerCanvas();
+ 
+  // Move the canvas so it’s inside our <div id="sketch-holder">.
+  cnv.parent('sketch-holder');
 
 
-        </body>
-        </html>
+}
+function windowResized() {
+  centerCanvas();
+}
+function draw() {
+  var icon = [dragon, kiwi, crow, book, dungeon, eye, ghost, meteor, pastafar, ying]
+  let s1 = map(second(), 0, 60, 0, 6);
+  let s2 = floor(s1);
+  let s3 = second();
+  let m1 = map(minute(), 0, 60, 0, 6);
+  let m2 = floor(m1);
+  let m3 = minute();
+  let h1 = map(hour(), 0, 24, 0, 2.4);
+  let h2 = floor(h1);
+  let h3 = hour();
+  background("magenta");
+  textSize(40);
+  textAlign(RIGHT);
+  text(hour(), 190, 50);
+  text(minute(), 260, 50);
+  text(second(), 320, 50);
+  fill(200, 200);
+  
+  textAlign(CENTER);
+  fill(0);
+ 
+  
+  textSize(50);
+  image(icon[h2], 20, 100, 50, 50);
+  image(icon[h3 - 10*h2], 90, 100, 50, 50);
+  image(icon[m2], 190, 100, 50, 50);
+  image(icon[m3 - 10*m2], 260, 100, 50, 50);
+  image(icon[s2], 360, 100, 50, 50);
+  image(icon[s3 - 10*s2], 430, 100, 50, 50);
+  if (second() % 2 == 0) {
+    text(":", 160, canvasSize - 355); 
+    textSize(40);
+    text(":", 205, canvasSize - 452);  }
+  }*/
+</script>
+ </div>
+<div class="row">
+<div class="column">
+<h2 id= "week-sixteen">31/8/20</h2>
+         <img class="sixthteenthpic"src="https://images.computerhistory.org/blog-media/xerox-alto-source-code-sol-20.jpg"alt="sol-20 pic">
+         </div>
+
+         <div class="column">
+         <p class="week-para"><i id="sat"class="fas fa-yin-yang fa-4x" style="color: orange;"></i>Spent the last week experimenting in P5JS, figuring out how to load and use images and sounds. My Floating Beaver game is now a Floating Octocat game. I downloaded some Octocat jpegs from GitHub plus some logos and now my game is essentially an unofficial advert for GitHub. Also, I went looking for royalty free sfx and music and put these in the game too. The sfx I downloaded from <a target=="_blank" href="http://soundbible.com/"> soundbible.com</a> and the game music from <a target=="_blank" href="https://incompetech.com/">incompetch.com</a>, site of famed free music composer Kevin McCleod. After doing all this, I coded what hopefully should be above this post. Since I'm a big fan of FontAwesome's fonts and have been trying to find ways of using them more, I've ended up making a 'Fonts Clock' in JavaScript, AKA,  a 'Hieroglyph Clock'. I might do more clock based stuff in future. One idea I have is recreating an art project I saw years ago called <a target=="_blank" href="https://clockclock.com/">'CLOCK CLOCK'</a>, designed by art collective Humans since 1982. This would be a bigger challenge then my 'Font Clock'.  </p>
+
+         </div>
+         </div>
+
+
+</body>
+</html>
