@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Project: Interactive slideshow</title>
+        <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="us-states.js"></script>
+
+        <style>
+        #state, #about {
+            font-family:monospace;
+        }
+        #state {
+            margin-top:10px;
+            background-color:yellow;
+            font-size: 1.5em;
+            width:25%;
+            padding:10px;
+        }
+        #about {
+            background-color:goldenrod;
+            position:absolute;
+            font-size: 1.5em;
+            left:30%;
+            width:15%;
+            padding:10px;
+        }
+        .prevNext{
+            position:absolute;
+            left:36.5%;
+            top:24.5em;
+            
+        }
+        #next{
+            
+            
+        }
+        #slideshow{
+            position:absolute;
+            left:30%;
+            top:27.5em;
+            width:15%;
+            
+        }
+        #spin{
+            position:absolute;
+            left:31.5%;
+            top:24.7em;
+        }
+        * {
+  box-sizing: border-box;
+}
+
+body {
+  font: 16px Arial;  
+}
+
+/*the container must be positioned relative:*/
+.autocomplete {
+  position: absolute;
+  top: 27.5em;
+
+}
+
+input {
+  border: 1px solid transparent;
+  background-color: #f1f1f1;
+  padding: 10px;
+  font-size: 16px;
+}
+
+input[type=text] {
+  background-color: #f1f1f1;
+  width: 100%;
+}
+
+button[type=submit] {
+  position: absolute;
+  top: 27.5em;
+  left:22.5%;
+  
+  
+  cursor: pointer;
+}
+
+.autocomplete-items {
+  position: absolute;
+  border: 1px solid #d4d4d4;
+  border-bottom: none;
+  border-top: none;
+  z-index: 99;
+  /*position the autocomplete items to be the same width as the container:*/
+  top: 100%;
+  left: 0;
+  right: 0;
+}
+
+.autocomplete-items div {
+  padding: 10px;
+  cursor: pointer;
+  background-color: #fff; 
+  border-bottom: 1px solid #d4d4d4; 
+}
+
+/*when hovering an item:*/
+.autocomplete-items div:hover {
+  background-color: #e9e9e9; 
+}
+
+/*when navigating through the items using the arrow keys:*/
+.autocomplete-active {
+  background-color: orange !important; 
+  color: #ffffff; 
+}
+        </style>
+    </head>
+    <body>
+    
+    <br>
+    <h2 id="about">Capital: Pheonix<br><br>Population: 7,278,717<br><br>Income Rank: 29th</h2>
+    <img id="pic"src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Flag_of_Arizona.svg/800px-Flag_of_Arizona.svg.png" width="400" alt="Flags">
+    <h2 id="state">ARIZONA STATE FLAG</h2>
+    
+          
+    <div class="btn-group prevNext">
+    <button type="button" class="btn btn-outline-warning" id="prev">Prev</button>
+    <button type="button" class="btn btn-outline-warning"id="next">Next</button>
+    </div>
+    <button type="button" class="btn btn-outline-warning" id="slideshow">Slideshow</button>
+    <div id="spin"class="spinner-grow text-warning"></div>
+    
+
+<!--Make sure the form has the autocomplete function switched off:-->
+<form autocomplete="off" action="/action_page.php">
+  <div class="autocomplete" style="width:300px;">
+    <input id="myInput" type="text" name="myCountry" placeholder="State">
+  </div>
+  <button type="submit" class="btn btn-outline-warning" id="sub">Find</button>
+</form>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script>
+
+        function autocomplete(inp, arr) {
+  /*the autocomplete function takes two arguments,
+  the text field element and an array of possible autocompleted values:*/
+  var currentFocus;
+  /*execute a function when someone writes in the text field:*/
+  inp.addEventListener("input", function(e) {
+      var a, b, i, val = this.value;
+      /*close any already open lists of autocompleted values*/
+      closeAllLists();
+      if (!val) { return false;}
+      currentFocus = -1;
+      /*create a DIV element that will contain the items (values):*/
+      a = document.createElement("DIV");
+      a.setAttribute("id", this.id + "autocomplete-list");
+      a.setAttribute("class", "autocomplete-items");
+      /*append the DIV element as a child of the autocomplete container:*/
+      this.parentNode.appendChild(a);
+      /*for each item in the array...*/
+      for (i = 0; i < arr.length; i++) {
+        /*check if the item starts with the same letters as the text field value:*/
+        if (arr[i].substr(0, val.length).toUpperCase() == val.toUpperCase()) {
+          /*create a DIV element for each matching element:*/
+          b = document.createElement("DIV");
+          /*make the matching letters bold:*/
+          b.innerHTML = "<strong>" + arr[i].substr(0, val.length) + "</strong>";
+          b.innerHTML += arr[i].substr(val.length);
+          /*insert a input field that will hold the current array item's value:*/
+          b.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
+          /*execute a function when someone clicks on the item value (DIV element):*/
+          b.addEventListener("click", function(e) {
+              /*insert the value for the autocomplete text field:*/
+              inp.value = this.getElementsByTagName("input")[0].value;
+              /*close the list of autocompleted values,
+              (or any other open lists of autocompleted values:*/
+              closeAllLists();
+          });
+          a.appendChild(b);
+        }
+      }
+  });
+  /*execute a function presses a key on the keyboard:*/
+  inp.addEventListener("keydown", function(e) {
+      var x = document.getElementById(this.id + "autocomplete-list");
+      if (x) x = x.getElementsByTagName("div");
+      if (e.keyCode == 40) {
+        /*If the arrow DOWN key is pressed,
+        increase the currentFocus variable:*/
+        currentFocus++;
+        /*and and make the current item more visible:*/
+        addActive(x);
+      } else if (e.keyCode == 38) { //up
+        /*If the arrow UP key is pressed,
+        decrease the currentFocus variable:*/
+        currentFocus--;
+        /*and and make the current item more visible:*/
+        addActive(x);
+      } else if (e.keyCode == 13) {
+        /*If the ENTER key is pressed, prevent the form from being submitted,*/
+        e.preventDefault();
+        if (currentFocus > -1) {
+          /*and simulate a click on the "active" item:*/
+          if (x) x[currentFocus].click();
+        }
+      }
+  });
+  function addActive(x) {
+    /*a function to classify an item as "active":*/
+    if (!x) return false;
+    /*start by removing the "active" class on all items:*/
+    removeActive(x);
+    if (currentFocus >= x.length) currentFocus = 0;
+    if (currentFocus < 0) currentFocus = (x.length - 1);
+    /*add class "autocomplete-active":*/
+    x[currentFocus].classList.add("autocomplete-active");
+  }
+  function removeActive(x) {
+    /*a function to remove the "active" class from all autocomplete items:*/
+    for (var i = 0; i < x.length; i++) {
+      x[i].classList.remove("autocomplete-active");
+    }
+  }
+  function closeAllLists(elmnt) {
+    /*close all autocomplete lists in the document,
+    except the one passed as an argument:*/
+    var x = document.getElementsByClassName("autocomplete-items");
+    for (var i = 0; i < x.length; i++) {
+      if (elmnt != x[i] && elmnt != inp) {
+        x[i].parentNode.removeChild(x[i]);
+      }
+    }
+  }
+  /*execute a function when someone clicks in the document:*/
+  document.addEventListener("click", function (e) {
+    event.preventDefault();
+    $word = $(this).find("[name=myCountry]"); // scoped
+    word = $word.val();
+    //console.log(word);
+      
+    closeAllLists(e.target);
+    
+  });
+}
+
+
+  
+$("#sub").on("click", function() {
+    event.preventDefault();
+    var a = states.indexOf(word);
+    console.log(states.length);
+    //for (var j = 0; j < stateArray.length; j++) {
+      //if (word === stateArray[j].name) {
+        //i=j;
+        i=a
+        flagMove()
+        $(this).find("[name=myCountry]").val("");
+        console.log(i);
+     // }
+   //}
+});
+
+var states = [];
+
+    
+    
+    for(var j = 0; j < stateArray.length; j++){
+        states[j] = stateArray[j].name;
+    }    
+/*initiate the autocomplete function on the "myInput" element, and pass along the countries array as possible autocomplete values:*/
+autocomplete(document.getElementById("myInput"), states);
+
+    var i = 0;
+    var slideCount = 99;
+    var slideStart = false;
+    $("#spin").hide();
+    $("#next").on("click", function() {
+        slideCount = 99;
+         slideStart = false;
+        rightClick();
+    }); 
+    $("#prev").on("click", function() {
+        slideCount = 99;
+        slideStart = false;
+        if(i > 0 ){    
+        i--;
+        flagMove();
+        console.log(pic.height);
+        }
+    }); 
+    $("#slideshow").on("click", function() {
+        if(slideStart === false){
+        slideCount = -1;
+          slideStart = true;
+        }
+        else if(slideStart === true){
+          slideCount = 99;
+          slideStart = false;
+        }
+    }); 
+        
+    var intervalID = window.setInterval(slideShow, 7000);
+    
+    function flagMove(){
+         $("#spin").show();
+        $("#state").slideUp(400, function(){
+            $("img").slideUp(700,function(){
+                $("img").attr("src", stateArray[i].flag);
+        $("img").height(stateArray[i].height);
+                 $("#about").slideUp(700,function(){
+                     flagSwap();
+                     flagDown();
+            })})});
+        }
+    var flagSwap = function(){
+        //i++;
+        
+        $("#state").html(stateArray[i].name +" STATE FLAG");
+        $("#state").css("background-color",stateArray[i].colour1);
+        $("#about").html(stateArray[i].about);
+        $("#about").css("background-color",stateArray[i].colour2);
+    }
+    var flagDown = function(){
+        $("img").slideDown(700, function(){
+            $("#state").slideDown(400, function(){
+                 $("#about").slideDown(700,function(){
+                     $("#spin").hide();
+                     
+                 })})});
+    }
+    
+    function slideShow(){
+       if(slideCount < stateArray.length -1){
+        slideCount ++;
+        i = slideCount;
+        //console.log(pic.height);
+        //console.log(pic.width);
+        flagMove();
+        console.log(pic.height);
+        }
+    }
+    function rightClick(){
+       
+        if(i < stateArray.length -1){
+     //for(var j = 0; j < stateArray.length; j++){
+        i++;
+        
+        flagMove();
+        console.log(pic.height);
+        };
+    }
+    //$("img").hide();
+    //$("img").slideDown();
+   
+    
+        // body...
+    
+    //$("#state").css("background-color",stateArray[i].colour2);
+    
+    
+    
+    
+    </script> 
+    </body>
+</html>
