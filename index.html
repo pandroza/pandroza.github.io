@@ -13,12 +13,12 @@
         @font-face {
         font-family: 'fp-1999';
 
-        src:url(strangeheadache.ttf) format('truetype');
+        src:url(fonts/strangeheadache.ttf) format('truetype');
         }
         @font-face {
         font-family: 'fp-1998';
 
-        src:url(strangeheadache.ttf) format('truetype');
+        src:url(fonts/strangeheadache.ttf) format('truetype');
         }
 
         body{
@@ -40,29 +40,37 @@
 
         }
         /*HIEROGLYPH CLOCK*/
-        h2#HC2{
-          background-color: black;
-          letter-spacing: 0px;
-          font-size: 5vw;
-          margin-left: 5%;
-          margin-right: 5%;
-          /*text-align: center;*/
-        }    
+        #clock {
+          width: 650px;
+          margin: auto;
+        }
+        h2 {
+          color:white;
+          font-family:'fp-1998';
+          text-align: center;
+        }
+        #us-heading {
+          margin-top: 200px;
+
+        }
         h3{
           color:white;
           font-family:'fp-1998';
           font-size:3vw;
           letter-spacing: 14px;
           text-transform: uppercase;
-          margin-bottom: 100px;
+          margin-top: 50px;
 
         }
+        
         /*CLOCK ICONS*/
-        i#icons2{
-          color:orange;
-          font-size: 3vw;
+         i#icons {
+          float:left;
+          color:white;
+          font-size: 4vw;
           padding-top:5px;
-          margin-left: 55px;
+          margin-left: 25px;
+          margin-right: 25px;
         }
         /*CLOCK LETTERS*/
         span { 
@@ -70,9 +78,7 @@
           padding-right: 20px;
          float:left;
         }
-        span#t { 
-          padding-right: 50px;
-        }
+        
             /*LINKS*/
         a:hover {
           color:yellow;
@@ -98,52 +104,23 @@
         
         
         @media screen and (max-width:1800px) {
-          body{
-            background-color: orange;
-          }
-          .header{
-            background-color: orange;
-          }
+          
           
 
         }
         @media screen and (max-width:1600px) {
-          body{
-            background-color: slateblue;
-          }
-          .header{
-            background-color: slateblue;
-          }
+          
           
 
         }
         @media screen and (max-width:1400px) {
-          body{
-            background-color: plum;
-          }
-          .header{
-            background-color: plum;
-          }
+          
           
 
         }
         @media screen and (max-width:1300px) {
-          body, .header, ul{
-            background-color: turquoise;
-          }
-
-          h1, h2, h3, ul.contents a ,li a {
-            color:cornflowerblue;
-          }
-
-          div.shiningicons{
-            font-size:3em;
-
-          }
-          div.b {
-            right:60%;
-            top:60%;
-          }
+          
+          
         }
 
 
@@ -151,34 +128,15 @@
 
 
         @media screen and (max-width:1200px) {
-          .column {
-            width: 90%;}
-           body{
-             background-color: yellow;
-           }
-           .header{
-             background-color: yellow;
-           }
-           h1 {
-             font-size: 5em;
-           }
-           h1, h3 {
-             color:hotpink
-           }
+          
            
            
         }
           @media screen and (max-width:1000px) {
-            body{
-              background-color: purple;
-            }
-            .header{
-              background-color: purple;
-            }
+            
 
             
-            
-          }
+        }
 
 
 
@@ -191,20 +149,20 @@
         <div class="header">
           
           <h1 id="home">PANDROZA.COM</h1>
-          <h2 id= "HC2">
-          <span>P</span>
+          
+          <!--<span>P</span>
           <span>A</span>
           <span>N</span>
-          <span id="t">D</span>
+          <span>D</span>
           <span>R</span>
           <span>O</span>
           <span>Z</span>
-          <span>A/span>
-          <span>K</span><i id="icons2"class="fab fa-android fa-1x"></i><i id="icons2"class="fab fa-android fa-1x"></i>
-         <i id="icons2"class="fab fa-android fa-1x"></i><i id="icons2"class="fab fa-android fa-1x"></i>
-         <i id="icons2"class="fab fa-android fa-1x"></i><i id="icons2"class="fab fa-android fa-1x"></i></h2>  
+          <span>A</span>-->
+          <div id="clock"><h2><i id="icons"class="fab fa-android fa-1x"></i><i id="icons"class="fab fa-android fa-1x"></i>
+         <i id="icons"class="fab fa-android fa-1x"></i><i id="icons"class="fab fa-android fa-1x"></i>
+         <i id="icons"class="fab fa-android fa-1x"></i><i id="icons"class="fab fa-android fa-1x"></i></h2></div>
             
-            <h3><a href="https://pandroza.github.io/usa-slideshow.html">usa slideshow</a></h3>
+            <h3 id="us-heading"><a href="https://pandroza.github.io/usa-slideshow.html">usa slideshow</a></h3>
             <h3><a href="https://pandroza.github.io/learn-guitar.html">guitar shop site-</a></h3>  
         </div>
         
@@ -230,10 +188,10 @@
           iEls[3].className = iconArr[m3 - 10*m2];
           iEls[4].className = iconArr[s2];
           iEls[5].className = iconArr[s3 - 10*s2];
-          spEls[0].style.transform= "rotate(" + s3 * 6 + "deg)";   
+          /*spEls[0].style.transform= "rotate(" + s3 * 6 + "deg)";   
           spEls[2].style.transform= "rotate(" + s3 * 6 + "deg)";  
           spEls[5].style.transform= "rotate(" + s3 * 6 + "deg)";   
-          spEls[8].style.transform= "rotate(" + s3 * 6 + "deg)";  
+          spEls[7].style.transform= "rotate(" + s3 * 6 + "deg)"; */
           }
              </script>     
 
