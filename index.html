@@ -13,12 +13,12 @@
         @font-face {
         font-family: 'fp-1999';
 
-        src:url(strangeheadache.ttf) format('truetype');
+        src:url(fonts/strangeheadache.ttf) format('truetype');
         }
         @font-face {
         font-family: 'fp-1998';
 
-        src:url(strangeheadache.ttf) format('truetype');
+        src:url(fonts/strangeheadache.ttf) format('truetype');
         }
 
         body{
@@ -41,8 +41,8 @@
         }
         /*HIEROGLYPH CLOCK*/
         #clock {
-          width: 650px;
-          margin: auto;
+          display:flex;
+          justify-content: center;
         }
         h2 {
           color:white;
@@ -50,7 +50,7 @@
           text-align: center;
         }
         #us-heading {
-          margin-top: 200px;
+          margin-top: 50px;
 
         }
         h3{
@@ -65,13 +65,14 @@
         
         /*CLOCK ICONS*/
          i#icons {
-          float:left;
+          
           color:white;
           font-size: 4vw;
           padding-top:5px;
-          margin-left: 25px;
-          margin-right: 25px;
+          
+          margin: 25px;
         }
+        
         /*CLOCK LETTERS*/
         span { 
           padding-left: 20px;
@@ -150,20 +151,13 @@
           
           <h1 id="home">PANDROZA.COM</h1>
           
-          <!--<span>P</span>
-          <span>A</span>
-          <span>N</span>
-          <span>D</span>
-          <span>R</span>
-          <span>O</span>
-          <span>Z</span>
-          <span>A</span>-->
-          <div id="clock"><h2><i id="icons"class="fab fa-android fa-1x"></i><i id="icons"class="fab fa-android fa-1x"></i>
+          
+          <div id="clock"><i id="icons"class="fab fa-android fa-1x"></i><i id="icons"class="fab fa-android fa-1x"></i>
          <i id="icons"class="fab fa-android fa-1x"></i><i id="icons"class="fab fa-android fa-1x"></i>
-         <i id="icons"class="fab fa-android fa-1x"></i><i id="icons"class="fab fa-android fa-1x"></i></h2></div>
+         <i id="icons"class="fab fa-android fa-1x"></i><i id="icons"class="fab fa-android fa-1x"></i></div>
             
             <h3 id="us-heading"><a href="https://pandroza.github.io/usa-slideshow.html">usa slideshow</a></h3>
-            <h3><a href="https://pandroza.github.io/learn-guitar.html">guitar shop site-</a></h3>  
+            <h3><a href="https://pandroza.github.io/learn-guitar.html">guitar shop site-</a></h3>
         </div>
         
         <script>
@@ -188,10 +182,7 @@
           iEls[3].className = iconArr[m3 - 10*m2];
           iEls[4].className = iconArr[s2];
           iEls[5].className = iconArr[s3 - 10*s2];
-          /*spEls[0].style.transform= "rotate(" + s3 * 6 + "deg)";   
-          spEls[2].style.transform= "rotate(" + s3 * 6 + "deg)";  
-          spEls[5].style.transform= "rotate(" + s3 * 6 + "deg)";   
-          spEls[7].style.transform= "rotate(" + s3 * 6 + "deg)"; */
+          
           }
              </script>     
 
