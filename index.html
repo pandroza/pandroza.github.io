@@ -39,6 +39,15 @@
             letter-spacing: 20px;
 
         }
+        /*HIEROGLYPH CLOCK*/
+        h2#HC2{
+          background-color: black;
+          letter-spacing: 0px;
+          font-size: 5vw;
+          margin-left: 5%;
+          margin-right: 5%;
+          /*text-align: center;*/
+        }    
         h3{
           color:white;
           font-family:'fp-1998';
@@ -48,7 +57,26 @@
           margin-bottom: 100px;
 
         }
-        
+        /*CLOCK ICONS*/
+        i#icons2{
+          color:orange;
+          font-size: 3vw;
+          padding-top:5px;
+          margin-left: 55px;
+        }
+        /*CLOCK LETTERS*/
+        span { 
+          padding-left: 20px;
+          padding-right: 20px;
+         float:left;
+        }
+        span#t { 
+          padding-right: 50px;
+        }
+            /*LINKS*/
+        a:hover {
+          color:yellow;
+        }
 
         
         
@@ -163,11 +191,51 @@
         <div class="header">
           
           <h1 id="home">PANDROZA.COM</h1>
+          <h2 id= "HC2">
+          <span>P</span>
+          <span>A</span>
+          <span>N</span>
+          <span id="t">D</span>
+          <span>R</span>
+          <span>O</span>
+          <span>Z</span>
+          <span>A/span>
+          <span>K</span><i id="icons2"class="fab fa-android fa-1x"></i><i id="icons2"class="fab fa-android fa-1x"></i>
+         <i id="icons2"class="fab fa-android fa-1x"></i><i id="icons2"class="fab fa-android fa-1x"></i>
+         <i id="icons2"class="fab fa-android fa-1x"></i><i id="icons2"class="fab fa-android fa-1x"></i></h2>  
+            
             <h3><a href="https://pandroza.github.io/usa-slideshow.html">usa slideshow</a></h3>
             <h3><a href="https://pandroza.github.io/learn-guitar.html">guitar shop site-</a></h3>  
         </div>
         
-        
+        <script>
+          var iEls = document.getElementsByTagName("i");
+          var spEls = document.getElementsByTagName("span");
+          var iconArr = ["fas fa-atom fa-1x", "fas fa-dragon fa-1x", "fas fa-kiwi-bird fa-1x", "fas fa-flask fa-1x", "fas fa-ghost fa-1x",
+          "fas fa-dungeon fa-1x", "fas fa-eye fa-1x", "fas fa-meteor fa-1x", "fas fa-yin-yang fa-1x", "fas fa-pastafarianism fa-1x"]; 
+          var rotate = 270;
+        function draw() {
+          let s1 = map(second(), 0, 60, 0, 6);
+          let s2 = floor(s1);
+          let s3 = second();
+          let m1 = map(minute(), 0, 60, 0, 6);
+          let m2 = floor(m1);
+          let m3 = minute();
+          let h1 = map(hour(), 0, 24, 0, 2.4);
+          let h2 = floor(h1);
+          let h3 = hour();
+          iEls[0].className = iconArr[h2];
+          iEls[1].className = iconArr[h3 - 10*h2];
+          iEls[2].className = iconArr[m2];
+          iEls[3].className = iconArr[m3 - 10*m2];
+          iEls[4].className = iconArr[s2];
+          iEls[5].className = iconArr[s3 - 10*s2];
+          spEls[0].style.transform= "rotate(" + s3 * 6 + "deg)";   
+          spEls[2].style.transform= "rotate(" + s3 * 6 + "deg)";  
+          spEls[5].style.transform= "rotate(" + s3 * 6 + "deg)";   
+          spEls[8].style.transform= "rotate(" + s3 * 6 + "deg)";  
+          }
+             </script>     
 
 
        
