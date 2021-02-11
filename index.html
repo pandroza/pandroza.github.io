@@ -75,11 +75,21 @@
 
         /* Extra small devices (phones, 600px and down) */
         @media only screen and (max-width: 400px) {
-          html {
-        
-          font-size: 8px;
-          
-        }  
+          h1{
+            
+          font-size:3rem;
+          letter-spacing: 14px;
+          }
+          /*CLOCK ICONS*/
+        i#icon {
+          font-size: 3rem;
+        }
+         #clock {
+          display: grid;
+          grid-template-columns: 40px 40px 40px 40px 40px 40px;
+          justify-content: center;
+          grid-gap: 10px;
+        }    
           .header {
           color:red;
           }
