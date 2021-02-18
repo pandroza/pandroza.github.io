@@ -8,10 +8,10 @@
         <!-- Place your kit's code here -->
         <script src="https://kit.fontawesome.com/c818ba25ab.js" crossorigin="anonymous"></script>
         <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/p5@1.1.4/lib/p5.min.js"></script>
-        
+
         <head>
         <style>
-        
+
         @font-face {
         font-family: 'fp-1998';
 
@@ -37,10 +37,10 @@
           font-family:'fp-1998';
           text-align: center;
 
-          
+
         }
         h1{
-            
+
           font-size:5rem;
           letter-spacing: 20px;
         }
@@ -51,7 +51,7 @@
           justify-content: center;
           grid-gap: 15px;
         }
-         
+
         h3{
           font-size:3rem;
           letter-spacing: 14px;
@@ -64,7 +64,7 @@
         /*CLOCK ICONS*/
         i#icon {
           font-size: 4rem;
-        }  
+        }
         /*LINKS*/
         a {
           color:black;
@@ -76,7 +76,7 @@
         /* Extra small devices (phones, 600px and down) */
         @media only screen and (max-width: 400px) {
           h1{
-            
+
           font-size:3rem;
           letter-spacing: 14px;
           }
@@ -89,7 +89,7 @@
           grid-template-columns: 40px 40px 40px 40px 40px 40px;
           justify-content: center;
           grid-gap: 10px;
-        }    
+        }
           .header {
           color:black;
           }
@@ -131,28 +131,28 @@
 
         </style>
         <head>
-          
+
         </head>
         <body>
 
         <div class="header">
-          
+
           <h1>PANDROZA.COM</h1>
-          
-          
+
+
           <div id="clock"><i id="icon"class="fab fa-android fa-1x"></i><i id="icon"class="fab fa-android fa-1x"></i>
          <i id="icon"class="fab fa-android fa-1x"></i><i id="icon"class="fab fa-android fa-1x"></i>
          <i id="icon"class="fab fa-android fa-1x"></i><i id="icon"class="fab fa-android fa-1x"></i></div>
-            
+
             <h3 id="us-heading"><a href="https://pandroza.github.io/usa-slideshow.html">usa slideshow</a></h3>
-            <h3><a href="https://pandroza.github.io/learn-guitar.html">guitar shop site</a></h3>
+            <h3><a href="Guitar">guitar shop site</a></h3>
         </div>
-        
+
         <script>
           var iEls = document.getElementsByTagName("i");
           var spEls = document.getElementsByTagName("span");
           var iconArr = ["fas fa-atom fa-1x", "fas fa-dragon fa-1x", "fas fa-kiwi-bird fa-1x", "fas fa-flask fa-1x", "fas fa-ghost fa-1x",
-          "fas fa-dungeon fa-1x", "fas fa-eye fa-1x", "fas fa-meteor fa-1x", "fas fa-yin-yang fa-1x", "fas fa-pastafarianism fa-1x"]; 
+          "fas fa-dungeon fa-1x", "fas fa-eye fa-1x", "fas fa-meteor fa-1x", "fas fa-yin-yang fa-1x", "fas fa-pastafarianism fa-1x"];
           var rotate = 270;
         function draw() {
           let s1 = map(second(), 0, 60, 0, 6);
@@ -170,13 +170,13 @@
           iEls[3].className = iconArr[m3 - 10*m2];
           iEls[4].className = iconArr[s2];
           iEls[5].className = iconArr[s3 - 10*s2];
-          
+
           }
-             </script>     
+             </script>
 
 
-       
- 
+
+
 
 
 
