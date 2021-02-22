@@ -108,7 +108,7 @@ text-align: center;
 padding: 10px 20px;
 }
 h3 {
-font-size:3rem;
+font-size:2rem;
 }
 h4 {
 font-family: 'Indie Flower', cursive;
@@ -123,11 +123,10 @@ color:#333;
 text-decoration: none;
 }
 #about, #about2 {
-
-font-size: 3rem;
+font-size: 2rem;
 }
 #about {
-margin-top:10px;
+margin-top:0px;
 }
 #about2 {
 margin-top:20px;
