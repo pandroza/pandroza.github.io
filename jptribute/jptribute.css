@@ -176,7 +176,9 @@ width:320px;
     grid-template-rows: 180px auto 200px;
     grid-gap: 0px;
     }
-
+    h3, #about, #about2 {
+    font-size:3rem;
+    }
     #img-caption {
     font-size: 1.4rem;
     }
