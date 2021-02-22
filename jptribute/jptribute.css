@@ -1,0 +1,199 @@
+html {
+font-size: 10px;
+}
+
+body {
+/* Native font stack https://getbootstrap.com/docs/4.2/content/reboot/#native-font-stack */
+font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
+'Helvetica Neue', Arial, sans-serif;
+font-size: 1.6rem;
+line-height: 1.5;
+text-align: center;
+color: #333;
+margin: 0;
+}
+
+h3, #about, #about2 {font-family:'Fredoka One', cursive;;
+}
+
+h1 {
+margin-top:0px;
+margin-bottom:40px;
+/*font-family: 'Fredoka One', cursive;*/
+font-family: 'Indie Flower', cursive;
+font-size:5rem;
+letter-spacing:3rem;
+
+
+}
+a {
+color: #477ca7;
+}
+
+
+.header {
+position:relative;
+width:100%;
+margin: 0px;
+padding-bottom:50px;
+padding-top: 50px;
+
+cursor: pointer;
+grid-area: header;
+}
+#leftside {
+grid-area: leftside;
+cursor: pointer;
+}
+#main {
+position:relative;
+margin: 0px;
+
+padding: 15px;
+border-radius: 5px;
+/*blue shade*/
+background:#B1CDCD;
+grid-area: content;
+
+}
+#rightside {
+grid-area: rightside;
+cursor: pointer;
+}
+#footer {
+grid-area: footer;
+cursor: pointer;
+}
+.container {
+width: 100%;
+display: grid;
+grid-template-columns: auto auto auto;
+grid-template-rows: auto auto 200px;
+grid-gap: 0px;
+grid-template-areas:
+"header header header"
+"leftside content rightside"
+"footer footer footer";
+}
+#doodle {
+position: fixed;
+z-index: -1;
+}
+css-doodle {
+--hue: calc(0 + 0.2*@row() * @col());
+--rule: (
+@grid: 15/100vmax;
+
+
+
+background: hsla(var(--hue), 60%, 70%, @r(.1, .9));
+clip-path:ellipse(100% 100% at @pick('0 0', '100% 100%', '100% 0', '100% 100%'));
+
+transition: @r(1s) ease;
+);
+}
+img {
+width: 100%;
+display: block;
+height: auto;
+}
+#img-div {
+width: 100%;
+max-width: 600px;
+background-color: white;
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+margin: 0 auto;
+margin-bottom: 40px;
+}
+#img-caption {
+text-align: center;
+padding: 10px 20px;
+}
+h3 {
+
+font-size:3rem;
+}
+h4 {
+
+font-family: 'Indie Flower', cursive;
+font-size:3rem;
+padding-top: 80px;
+}
+#headline {
+margin-top: 100px;
+}
+.contents {
+color:#333;
+text-decoration: none;
+}
+#about, #about2 {
+
+font-size: 3rem;
+}
+#about {
+margin-top:20px;
+}
+#about2 {
+margin-top:20px;
+margin-bottom:20px;
+}
+p {
+max-width:600px;
+margin:auto;
+font-family: Arial, Helvetica, sans-serif;
+
+}
+ul {
+max-width:600px;
+margin:auto;
+font-family: Arial, Helvetica, sans-serif;
+text-align: left;
+}
+#ytlist1, #ytlist2, #ytlist3 {
+max-width:600px;
+margin:auto;
+font-family: Arial, Helvetica, sans-serif;
+text-align: left;
+}
+#ytlist1:hover, #ytlist2:hover, #ytlist3:hover {
+color:red;
+cursor: pointer;
+
+}
+#player {
+margin-top: 50px;
+margin-bottom: 20px;
+height:243px;
+width:400px;
+
+}
+@media (max-width: 460px) {
+    #img-caption {
+    font-size: 1.4rem;
+    }
+}
+
+@media (min-width: 800px) {
+    .container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto 750px auto;
+    grid-template-rows: auto auto 200px;
+    grid-gap: 0px;
+    }
+
+    #img-caption {
+    font-size: 1.4rem;
+    }
+    #about {
+    margin-top:40px;
+    }
+    #about2 {
+    margin-top:40px;
+    margin-bottom:60px;
+    }
+    #player {
+    height:304px;
+    width:500px;
+    }
+}
