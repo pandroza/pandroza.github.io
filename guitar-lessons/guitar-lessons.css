@@ -1,0 +1,203 @@
+html {
+  font-size: 10px;
+}
+body {
+  /* Native font stack https://getbootstrap.com/docs/4.2/content/reboot/#native-font-stack */
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
+    'Helvetica Neue', Arial, sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  color: #333;
+  margin: 0;
+}
+p {
+    font-family: Arial, Helvetica, sans-serif;
+}
+#about {
+  font-family: 'Indie Flower', cursive;
+}
+.navbar {
+  font-family: 'Fredoka One', cursive;
+  font-family: 'Indie Flower', cursive;
+  font-size: 2.5rem;
+}
+.navbar-brand {
+  font-family: 'Fredoka One', cursive;
+  font-family: 'Indie Flower', cursive;
+}
+#header-img {
+  font-size: 2.5rem;
+}
+#nt {
+  font-size: 2rem;
+}
+#heading1, #heading2, #heading3 {
+   text-align: center;
+  font-family: 'Fredoka One', cursive;
+  font-family: 'Indie Flower', cursive;
+  font-size: 3.5rem;
+  letter-spacing:1rem;
+}
+#heading1 {
+  grid-area: about-head;
+}
+h4 {
+font-family: 'Indie Flower', cursive;
+font-size:4rem;
+
+}
+#about-me {
+    font-family: Arial, Helvetica, sans-serif;
+  padding:10px 10px;
+  line-height:3rem;
+  font-size: 2rem;
+  grid-area: about-me;
+}
+#how-it-works {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  grid-area: film;
+  padding:0px 10px;
+}
+#how-it-works > iframe {
+  width: 100%;
+}
+#doodle {
+   position: fixed;
+   z-index: -1;
+}
+.doodle4 {
+  position: fixed;
+  z-index: -1;
+  background: #B2DFDB;
+  --rule1: (
+    @grid: 8 / 100vmax;
+  background: hsla(@r(100), 85%, @r(90%, 100%), @r(.9));
+    @even {
+      background: #60569e;
+  }
+  @size: @r(1vmax, 10vmax);
+    @shape: bud 10;
+  animation: test1 infinite @r(100s, 150s) linear;
+  @keyframes test1 {
+        0% {
+            opacity:0;
+            transform: translate3d(@r(150px), @r(200px), 0) rotate(@r(360deg));
+        }
+        2% {
+            opacity:1;
+        }
+        50% {
+            transform: translate3d(@r(-500%, 3000%), @r(-500%, 1000%), 0);
+        }
+        98% {
+            opacity:1;
+        }
+        100% {
+            opacity:0;
+            transform: translate3d(@r(150px), @r(200px), 0) rotate(@r(0deg));
+         }
+    }
+  );
+}
+#box {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  height:400px;
+}
+#about {
+  font-size: 4.5rem;
+  letter-spacing:1rem;
+  padding:0px 20px;
+  padding-top:30px;
+  max-width:700px;
+}
+#box2 {
+  padding:40px 10px;
+  background:#f8f9fa;
+  border-top-style: solid;
+  border-width: 5px;
+  border-color: hsl(0, 1%, 50%);
+}
+#box3 {
+  padding:40px 10px;
+  background:hsl(0, 1%, 78%, 0.8);
+  width:100%;
+  height:400px;
+  border-style: solid none;
+  border-width: 5px;
+  border-color: hsl(0, 1%, 50%);
+}
+#box4 {
+  padding:40px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 300px;
+}
+#footer {
+  background:#f8f9fa;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-top-style: solid;
+  border-width: 5px;
+  border-color: hsl(0, 1%, 50%);
+  height: 100px;
+}
+.caro {
+  padding-top:60px;
+}
+div.carousel-caption {
+   font-size: 1.8rem;
+}
+.author {
+  color:black;
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  div.carousel-caption {
+   font-size: 2rem;
+  }
+  #how-it-works {
+  margin-top: 40px;
+  padding:0px 50px;
+  }
+}
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  #box {
+    height:450px;
+  }
+  #about {
+    font-size:4.5rem;
+  }
+  #how-it-works {
+    margin-top: 50px;
+    padding:0px 130px;
+  }
+}
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  #box2 {
+    display: grid;
+    grid-template-areas:
+    'about-head film'
+    'about-me film';
+  grid-template-columns: 300px 560px;
+  grid-gap: 10px;
+   justify-content: center;
+  }
+   #how-it-works {
+    margin-top: 30px;
+   padding:0px 0px;
+  }
+}
