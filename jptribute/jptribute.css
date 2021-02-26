@@ -100,7 +100,7 @@ width: 100%;
 max-width: 600px;
 background-color: white;
 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-margin: 20px auto;
+margin: 10px auto;
 margin-bottom: 40px;
 }
 #img-caption {
@@ -126,11 +126,11 @@ text-decoration: none;
 font-size: 3rem;
 }
 #about {
-margin-top:0px;
+margin-top:40px;
 }
 #about2 {
-margin-top:20px;
-margin-bottom:20px;
+margin-top:40px;
+margin-bottom:40px;
 }
 p {
 max-width:600px;
@@ -193,4 +193,8 @@ width:320px;
     height:304px;
     width:500px;
     }
+    #img-div {
+    margin: 40px auto;
+    margin-bottom: 40px;
+}
 }
