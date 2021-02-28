@@ -158,6 +158,9 @@ width:320px;
     #img-caption {
     font-size: 1.4rem;
     }
+    ul {
+    padding-left:20px;    
+    }
 }
 @media (max-width: 600px) {
   #main {
