@@ -60,12 +60,12 @@ font-size:4rem;
   z-index: -1;
   background: #0a0c27;
   
-   --hue: (@r360, 70%, 70%, @r.9);
+   
   --rule1: (
      @grid: 10 / 100vmax;
     :after {
   content: \@hex(@rand(9833,9837));
-    color: hsla(var(--hue));
+    color: hsla(@r360, 70%, 70%, @r.9);
     font-size: @r(4vmax, 12vmax);
 }
      
