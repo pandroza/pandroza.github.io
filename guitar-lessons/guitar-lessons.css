@@ -64,9 +64,9 @@ font-size:4rem;
    
   --rule1: (
      @grid: 10 / 100vmax;
-    color: hsla(@r360, 70%, 70%, @r.9);
+    
     :after {
-      color: hsla(@r360, 70%, 70%, @r.9);
+      
   content: \@hex(@rand(9833,9837));
     color: hsla(@r360, 70%, 70%, @r.9);
     font-size: @r(4vmax, 12vmax);
