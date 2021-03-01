@@ -79,7 +79,8 @@ font-size:4rem;
      @grid: 5 / 100vmax;
     :after {
   content: \@hex(@rand(9833,9837));
-    color: hsla(@r360, 70%, 70%, @r.9);
+    /*color: hsla(@r360, 70%, 70%, @r.9);*/
+       color:orange;
     font-size: @r(4vmax, 12vmax);
 }
      
