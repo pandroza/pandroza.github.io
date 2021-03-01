@@ -76,7 +76,7 @@ font-size:4rem;
   z-index: -1;
   background: #0a0c27;
   --rule1: (
-     @grid: 5 / 100vmax;
+     @grid: 10 / 100vmax;
     :after {
   content: \@hex(@rand(9833,9837));
     color: hsla(@r360, 70%, 70%, @r.9);
