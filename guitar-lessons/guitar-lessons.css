@@ -15,6 +15,7 @@ p {
 }
 #about {
   font-family: 'Indie Flower', cursive;
+  color:linen;
 }
 .navbar {
   font-family: 'Fredoka One', cursive;
@@ -41,6 +42,7 @@ p {
 #heading1 {
   grid-area: about-head;
 }
+#heading3 {color:white;}
 h4 {
 font-family: 'Indie Flower', cursive;
 font-size:4rem;
@@ -54,33 +56,36 @@ font-size:4rem;
   grid-area: about-me;
 }
 #how-it-works {
-  margin-top: 50px;
   display: flex;
   justify-content: center;
+  align-items:center;
   grid-area: film;
-  padding:0px 10px;
+  padding:30px 0px;
 }
 #how-it-works > iframe {
-  width: 100%;
+  height:270px;
+  width: 360px;
+  
 }
 #doodle {
    position: fixed;
    z-index: -1;
 }
-.doodle4 {
+.doodle6 {
   position: fixed;
   z-index: -1;
-  background: #B2DFDB;
+  background: #0a0c27;
   --rule1: (
-    @grid: 8 / 100vmax;
-  background: hsla(@r(100), 85%, @r(90%, 100%), @r(.9));
-    @even {
-      background: #60569e;
-  }
-  @size: @r(1vmax, 10vmax);
-    @shape: bud 10;
-  animation: test1 infinite @r(100s, 150s) linear;
-  @keyframes test1 {
+     @grid: 10 / 100vmax;
+    :after {
+  content: \@hex(@rand(9833,9837));
+    color: hsla(@r360, 70%, 70%, @r.9);
+    font-size: @r(4vmax, 12vmax);
+}
+     
+    animation: test infinite @r(50s, 100s) linear;
+     
+    @keyframes test {
         0% {
             opacity:0;
             transform: translate3d(@r(150px), @r(200px), 0) rotate(@r(360deg));
@@ -89,17 +94,30 @@ font-size:4rem;
             opacity:1;
         }
         50% {
-            transform: translate3d(@r(-500%, 3000%), @r(-500%, 1000%), 0);
+          transform: translate3d(@r(-500%, 500%), @r(-500%, 500%), 0);
         }
         98% {
             opacity:1;
         }
         100% {
             opacity:0;
-            transform: translate3d(@r(150px), @r(200px), 0) rotate(@r(0deg));
-         }
+            transform: translate3d(@r(150px), @r(200px), 0) rotate(@r(360deg));
+          
     }
-  );
+        }
+  
+  );}
+#mark1 {
+  background: hsla(70, 70%, 70%);
+}
+#mark2 {
+  background: hsla(160, 70%, 70%, 0.5);
+}
+#mark3 {
+  background: hsla(220, 70%, 70%, 0.5);
+}
+#mark4 {
+  background: hsla(360, 70%, 70%, 0.5);
 }
 #box {
   display: flex;
@@ -156,48 +174,75 @@ font-size:4rem;
   padding-top:60px;
 }
 div.carousel-caption {
-   font-size: 1.8rem;
+  font-size: 1.8rem;
 }
 .author {
   color:black;
 }
-
+#img-caption {
+  font-size: 1.4rem;
+}
+@media (min-width: 460px) {
+  #img-caption {
+  font-size: 1.4rem;
+  }
+  #box2 {
+  /*background:crimson;*/
+  }
+  #how-it-works > iframe {
+  height:300px;
+  width: 400px;
+  }
+}
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
   div.carousel-caption {
    font-size: 2rem;
   }
-  #how-it-works {
-  margin-top: 40px;
-  padding:0px 50px;
-  }
+  #box2 {
+    /*background:cornflowerblue;*/
+    padding:40px 20px;
+   }
+    
+  
 }
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
   #box {
     height:450px;
   }
+  #box2 {
+    padding:40px 40px;
+  }
   #about {
     font-size:4.5rem;
   }
   #how-it-works {
-    margin-top: 50px;
-    padding:0px 130px;
+    padding:30px 0px;
   }
 }
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
   #box2 {
+    /*background:limegreen;*/
     display: grid;
     grid-template-areas:
     'about-head film'
     'about-me film';
-  grid-template-columns: 300px 560px;
-  grid-gap: 10px;
+  grid-template-columns: auto 460px;
+  grid-gap: 20px;
    justify-content: center;
   }
-   #how-it-works {
-    margin-top: 30px;
-   padding:0px 0px;
-  }
+}
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  #box2 {
+    /*background:orange;*/
+    display: grid;
+    grid-template-areas:
+    'about-head film'
+    'about-me film';
+  grid-template-columns: 500px 500px;
+  grid-gap: 20px;
+   justify-content: center;
 }
