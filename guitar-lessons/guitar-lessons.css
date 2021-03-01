@@ -68,8 +68,9 @@ font-size:4rem;
     :after {
       
   content: \@hex(@rand(9833,9837));
-    color: hsla(@r360, 70%, 70%, @r.9);
-    font-size: @r(4vmax, 12vmax);
+      color: green;
+    color: hsla(@rand360, 70%, 70%, @rand.9);
+    font-size: @rand(4vmax, 12vmax);
 }
      
     animation: test infinite @r(50s, 100s) linear;
