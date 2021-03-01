@@ -79,12 +79,12 @@ font-size:4rem;
      @grid: 5 / 100vmax;
     :after {
   content: \@hex(@rand(9833,9837));
-    /*color: hsla(@r360, 70%, 70%, @r.9);*/
-       color:orange;
+    color: hsla(@r360, 70%, 70%, @r.9);
+       /*color:orange;*/
     font-size: @r(4vmax, 12vmax);
 }
      
-    animation: test infinite @r(50s, 100s) linear;
+    /*animation: test infinite @r(50s, 100s) linear;
      
     @keyframes test {
         0% {
@@ -105,7 +105,7 @@ font-size:4rem;
             transform: translate3d(@r(150px), @r(200px), 0) rotate(@r(360deg));
           
     }
-        }
+        }*/
   
   );}
 #mark1 {
