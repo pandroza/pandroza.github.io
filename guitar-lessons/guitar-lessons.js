@@ -23,4 +23,11 @@ var titles = function() {
 }; 
 titles();
 
+function simulateClick() {
+            console.log("hello"); 
+            doodle.update();
+        };
+          
+ 
+document.getElementById("box").addEventListener('click', simulateClick);
 
