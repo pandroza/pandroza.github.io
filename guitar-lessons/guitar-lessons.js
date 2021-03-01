@@ -1,7 +1,7 @@
 var h = ["Anyone can play guitar!","No matter what your age, you can learn with me!","Lessons available online or in person!", "Want to learn but not confident? Don't worry! I can help!"]
 var hc = 0;
 document.getElementById("about");
-var startTime = new Date().getTime();
+var startTime = new Date().getTime();  
 var titles = function() {
     var currTime = new Date().getTime();
     var count = ((currTime - startTime)/1000);
@@ -14,11 +14,13 @@ var titles = function() {
   }
   if (count > 10) {
     hc ++;
-    if(hc === 3){
+    if(hc === 4){
       hc = 0;
     }
     startTime = new Date().getTime();
   }
   window.requestAnimationFrame(titles);
-};
+}; 
 titles();
+
+
