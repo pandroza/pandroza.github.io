@@ -2,40 +2,27 @@ html {
   font-size: 10px;
 }
 body {
-  /* Native font stack https://getbootstrap.com/docs/4.2/content/reboot/#native-font-stack */
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
-    'Helvetica Neue', Arial, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   font-size: 1.6rem;
   line-height: 1.5;
   color: #333;
   margin: 0;
 }
-p {
-    font-family: Arial, Helvetica, sans-serif;
+.navbar, .navbar-brand, #about, #heading1, #heading2, #heading3, h4 {
+  font-family: 'Indie Flower', cursive;
 }
 #about {
-  font-family: 'Indie Flower', cursive;
   color:linen;
 }
-.navbar {
-  font-family: 'Fredoka One', cursive;
-  font-family: 'Indie Flower', cursive;
-  font-size: 2.5rem;
-}
-.navbar-brand {
-  font-family: 'Fredoka One', cursive;
-  font-family: 'Indie Flower', cursive;
-}
-#header-img {
-  font-size: 2.5rem;
-}
-#nt {
+#nt, #about-me {
   font-size: 2rem;
 }
+.navbar, #header-img {
+  font-size: 2.5rem;
+}
+
 #heading1, #heading2, #heading3 {
    text-align: center;
-  font-family: 'Fredoka One', cursive;
-  font-family: 'Indie Flower', cursive;
   font-size: 3.5rem;
   letter-spacing:1rem;
 }
@@ -44,15 +31,12 @@ p {
 }
 #heading3 {color:white;}
 h4 {
-font-family: 'Indie Flower', cursive;
 font-size:4rem;
 
 }
 #about-me {
-    font-family: Arial, Helvetica, sans-serif;
   padding:10px 10px;
   line-height:3rem;
-  font-size: 2rem;
   grid-area: about-me;
 }
 #how-it-works {
@@ -80,7 +64,6 @@ font-size:4rem;
     :after {
   content: \@hex(@rand(9833,9837));
     color: hsla(@r360, 70%, 70%, @r.9);
-       
     font-size: @r(4vmax, 12vmax);
 }
      
@@ -184,12 +167,6 @@ div.carousel-caption {
   font-size: 1.4rem;
 }
 @media (min-width: 460px) {
-  #img-caption {
-  font-size: 1.4rem;
-  }
-  #box2 {
-  /*background:crimson;*/
-  }
   #how-it-works > iframe {
   height:300px;
   width: 400px;
@@ -201,7 +178,6 @@ div.carousel-caption {
    font-size: 2rem;
   }
   #box2 {
-    /*background:cornflowerblue;*/
     padding:40px 20px;
    }
     
@@ -225,7 +201,6 @@ div.carousel-caption {
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
   #box2 {
-    /*background:limegreen;*/
     display: grid;
     grid-template-areas:
     'about-head film'
@@ -238,7 +213,6 @@ div.carousel-caption {
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
   #box2 {
-    /*background:orange;*/
     display: grid;
     grid-template-areas:
     'about-head film'
