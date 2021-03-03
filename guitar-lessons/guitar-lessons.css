@@ -69,8 +69,8 @@ font-size:4rem;
       
   content: \@hex(@rand(9833,9837));
       /*text-shadow hack needed so color shows on phones*/
-      color:transparent;
-      text-shadow:0 0 0 hsla(@r360, 70%, 70%, @r.9);
+      /*color:transparent;
+      text-shadow:0 0 0 hsla(@r360, 70%, 70%, @r.9);*/
     font-size: @rand(4vmax, 12vmax);
 }
      
