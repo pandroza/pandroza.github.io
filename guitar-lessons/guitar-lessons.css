@@ -66,7 +66,7 @@ font-size:4rem;
      @grid: 10 / 100vmax;
     
     :after {
-      
+      font-family: Arial;
   content: \@hex(@rand(9833,9837));
       /*text-shadow hack needed so color shows on phones*/
       color:transparent;
