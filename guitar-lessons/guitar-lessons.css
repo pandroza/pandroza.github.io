@@ -66,8 +66,8 @@ font-size:4rem;
      @grid: 10 / 100vmax;
     
     :after {
-      font-family: Arial;
-      font-weight:800;
+      font-family: verdana;
+      
   content: \@hex(@rand(9833,9837));
       /*text-shadow hack needed so color shows on phones*/
       color:transparent;
