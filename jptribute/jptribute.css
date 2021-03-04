@@ -72,7 +72,7 @@ z-index: -1;
 css-doodle {
 --hue: calc(0 + 0.2*@row() * @col());
 --rule: (
-@grid: 15/100vmax;
+@grid: 8/100vh;
 
 
 
