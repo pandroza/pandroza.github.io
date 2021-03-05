@@ -37,7 +37,7 @@ for(var i = 0; i < circles.length; i++){
     circles[i].addEventListener('click', simulateClick);
   }
 var curentvid;
-var vid1 = 'NfOCQj25Y_0'
+var vid1 = 'PebUde00V9o'
 var vid2 = 'aKF53fS-oBM'
 var vid3 = 'j_aUFuZA9oo'
 var teenage = "ZPzyN8Qq5XA"
@@ -54,7 +54,7 @@ currentvid = vid3;
     var player;
     function onYouTubeIframeAPIReady() {
       player = new YT.Player('player', {
-        videoId: "NfOCQj25Y_0",
+        videoId: "PebUde00V9o",
         events: {
         }
       });
@@ -80,7 +80,7 @@ currentvid = vid3;
           player.cueVideoById({videoId:"j_aUFuZA9oo",'startSeconds': 1});
           };
     function newvid2() {
-          player.cueVideoById({videoId:"NfOCQj25Y_0",'startSeconds': 1});
+          player.cueVideoById({videoId:"PebUde00V9o",'startSeconds': 1});
           };
     function newvid3() {
           player.cueVideoById({videoId:"aKF53fS-oBM",'startSeconds': 1});
