@@ -39,8 +39,8 @@ for(var i = 0; i < circles.length; i++){
 var curentvid;
 var vid1 = 'PebUde00V9o'
 var vid2 = '_TLzor3qSmQ'
-var vid3 = 'f6lX1uKectg&t'
-var vid4 = 'sSEsvu8vZOY&t'
+var vid3 = 'f6lX1uKectg'
+var vid4 = 'sSEsvu8vZOY'
 var vid5 = 'aKF53fS-oBM'
 var vid6 = 'j_aUFuZA9oo'
 var teenage = "ZPzyN8Qq5XA"
@@ -86,10 +86,10 @@ function newvid2() {
           player.cueVideoById({videoId:"_TLzor3qSmQ",'startSeconds': 1});
           };
 function newvid3() {
-          player.cueVideoById({videoId:"f6lX1uKectg&t",'startSeconds': 1});
+          player.cueVideoById({videoId:"f6lX1uKectg",'startSeconds': 1});
           };
 function newvid4() {
-          player.cueVideoById({videoId:"sSEsvu8vZOY&t",'startSeconds': 1});
+          player.cueVideoById({videoId:"sSEsvu8vZOY",'startSeconds': 1});
           };
     function newvid5() {
           player.cueVideoById({videoId:"PebUde00V9o",'startSeconds': 1});
