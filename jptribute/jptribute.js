@@ -101,5 +101,5 @@ function newvid4() {
       document.getElementById("ytlist2").addEventListener('click', newvid2);
       document.getElementById("ytlist3").addEventListener('click', newvid3);
       document.getElementById("ytlist4").addEventListener('click', newvid4);
-      document.getElementById("ytlist3").addEventListener('click', newvid5);
-      document.getElementById("ytlist4").addEventListener('click', newvid6);
+      document.getElementById("ytlist5").addEventListener('click', newvid5);
+      document.getElementById("ytlist6").addEventListener('click', newvid6);
