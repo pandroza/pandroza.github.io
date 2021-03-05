@@ -90,5 +90,6 @@ function newvid2() {
           player.cueVideoById({videoId:"aKF53fS-oBM",'startSeconds': 1});
           };
       document.getElementById("ytlist1").addEventListener('click', newvid1);
+      document.getElementById("ytlist2").addEventListener('click', newvid2);
       document.getElementById("ytlist3").addEventListener('click', newvid3);
       document.getElementById("ytlist4").addEventListener('click', newvid4);
