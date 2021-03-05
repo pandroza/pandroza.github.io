@@ -1,3 +1,34 @@
+var r = document.querySelector(':root');
+var g1 = "8x13";
+var s1 = "12.5vw";
+var g2 = "10x10";
+var s2 = "10vw";
+var g3 = "12x6";
+var s3 = "8.333vw";
+
+function myFunction(x) {
+  if (window.matchMedia("(min-width: 1100px)").matches) {
+  r.style.setProperty('--my-grid', g3);
+             r.style.setProperty('--my-size', s3);
+            doodle.update();
+  } else if (window.matchMedia("(min-width: 800px)").matches) { // If media query matches
+      r.style.setProperty('--my-grid', g2);
+             r.style.setProperty('--my-size', s2);
+            doodle.update();
+  } else {
+    r.style.setProperty('--my-grid', g1);
+    r.style.setProperty('--my-size', s1);
+    doodle.update();}
+  
+
+}
+var x = window.matchMedia("(min-width: 800px)")
+myFunction(x) // Call listener function at run time
+x.addListener(myFunction) // Attach listener function on state changes
+var y = window.matchMedia("(min-width: 1100px)")
+myFunction(y) // Call listener function at run time
+y.addListener(myFunction) // Attach listener function on state changes
+
 function simulateClick() {
   doodle.update();
       };
