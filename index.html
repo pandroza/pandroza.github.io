@@ -44,7 +44,7 @@
         }
         h1{
 
-          font-size:5rem;
+          font-size:3rem;
           letter-spacing: 20px;
         }
         /*HIEROGLYPH CLOCK*/
@@ -77,12 +77,8 @@
         }
 
         /* Extra small devices (phones, 600px and down) */
-        @media only screen and (min-width: 400px) {
-          h1{
-
-          font-size:3rem;
-          letter-spacing: 14px;
-          }
+        @media only screen and (max-width: 600px) {
+          
           /*CLOCK ICONS*/
         i#icon {
           font-size: 3rem;
@@ -112,8 +108,13 @@
         }
         /* Medium devices (landscape tablets, 768px and up) */
         @media only screen and (min-width: 768px) {
+          h1{
+
+          font-size:5rem;
+          letter-spacing: 14px;
+          }  
           .header {
-          color:black;
+          color:pink;
           }
         }
         /* Large devices (laptops/desktops, 992px and up) */
