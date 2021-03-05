@@ -80,7 +80,7 @@ currentvid = vid3;
       player.stopVideo();
     }
     function newvid1() {
-          player.cueVideoById({videoId:"j_aUFuZA9oo",'startSeconds': 1});
+          player.cueVideoById({videoId:"PebUde00V9o",'startSeconds': 1});
           };
 function newvid2() {
           player.cueVideoById({videoId:"_TLzor3qSmQ",'startSeconds': 1});
@@ -92,7 +92,7 @@ function newvid4() {
           player.cueVideoById({videoId:"sSEsvu8vZOY",'startSeconds': 1});
           };
     function newvid5() {
-          player.cueVideoById({videoId:"PebUde00V9o",'startSeconds': 1});
+          player.cueVideoById({videoId:"NfOCQj25Y_0",'startSeconds': 1});
           };
     function newvid6() {
           player.cueVideoById({videoId:"aKF53fS-oBM",'startSeconds': 1});
