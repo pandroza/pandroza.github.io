@@ -1,3 +1,9 @@
+:root {
+   --my-grid: 8x13;
+   --my-size: 12.5vw;
+  
+}
+
 html {
 font-size: 10px;
 }
@@ -72,7 +78,8 @@ z-index: -1;
 css-doodle {
 --hue: calc(0 + 0.2*@row() * @col());
 --rule: (
-@grid: 8/100vw;
+@grid: var(--my-grid);
+      @size: var(--my-size);  
 
 
 
