@@ -38,8 +38,9 @@ for(var i = 0; i < circles.length; i++){
   }
 var curentvid;
 var vid1 = 'PebUde00V9o'
-var vid2 = 'aKF53fS-oBM'
-var vid3 = 'j_aUFuZA9oo'
+var vid2 = '_TLzor3qSmQ'
+var vid3 = 'aKF53fS-oBM'
+var vid4 = 'j_aUFuZA9oo'
 var teenage = "ZPzyN8Qq5XA"
 currentvid = vid3;
 // 2. This code loads the IFrame Player API code asynchronously.
@@ -79,12 +80,15 @@ currentvid = vid3;
     function newvid1() {
           player.cueVideoById({videoId:"j_aUFuZA9oo",'startSeconds': 1});
           };
-    function newvid2() {
-          player.cueVideoById({videoId:"PebUde00V9o",'startSeconds': 1});
+function newvid2() {
+          player.cueVideoById({videoId:"_TLzor3qSmQ",'startSeconds': 1});
           };
     function newvid3() {
+          player.cueVideoById({videoId:"PebUde00V9o",'startSeconds': 1});
+          };
+    function newvid4() {
           player.cueVideoById({videoId:"aKF53fS-oBM",'startSeconds': 1});
           };
       document.getElementById("ytlist1").addEventListener('click', newvid1);
-      document.getElementById("ytlist2").addEventListener('click', newvid2);
       document.getElementById("ytlist3").addEventListener('click', newvid3);
+      document.getElementById("ytlist4").addEventListener('click', newvid4);
