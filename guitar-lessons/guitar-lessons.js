@@ -1,4 +1,4 @@
-var h = ["Anyone can play guitar!","No matter what your age, you can learn with me!","Lessons available online or in person!", "Want to learn but not confident? I can help!"]
+var h = ["Anyone can play guitar!", "No matter what your age, you can learn with me!", "Lessons for Electric, acoustic, bass and Ukelele!", "Want to learn but not confident? I can help!", "Lessons available online or in person!"]
 var hc = 0;
 document.getElementById("about");
 var startTime = new Date().getTime();  
