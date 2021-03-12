@@ -158,7 +158,7 @@ div.carousel-caption, .author {
   box-shadow: 10px 10px 5px #aaaaaa; 
 }
 #image1 {
-  max-width: 400px;
+  max-width: 300px;
   margin-top: 30px;
   margin-bottom: 30px;
   grid-area: pic; 
@@ -209,25 +209,20 @@ grid-area: pic-3;
 
 @media (min-width: 460px) {
   #how-it-works > iframe {
-  height:300px;
-  width: 400px;
+  height:225px;
+  width: 300px;
   }
 }
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
+  #image1 {
+  max-width: 400px;
+  
+}      
   #box2 {
     padding:40px 20px;
    }
-  .rotate_left {
-  -ms-transform: rotate(-7deg); /* IE 9 */
-  -webkit-transform: rotate(-7deg); /* Safari */
-  transform: rotate(-7deg);
-  }
-  .rotate_right {
-  -ms-transform: rotate(7deg); /* IE 9 */
-  -webkit-transform: rotate(7deg); /* Safari */
-  transform: rotate(7deg);
-  }  
+  
   div.carousel-caption {
    font-size: 2rem;
   }
