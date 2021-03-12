@@ -1,0 +1,273 @@
+@font-face {
+        font-family: 'fp-1';
+
+        src:url(metro.otf) format('opentype');
+        }
+
+html {
+  /* Setting a base font size of 10px give us easier rem calculations
+     Info: 1rem === 10px, 1.5rem === 15px, 2rem === 20px and so forth
+   */
+  font-size: 10px;
+  height: 100%;
+  margin: 0;
+}
+body {
+  /* Native font stack https://getbootstrap.com/docs/4.2/content/reboot/#native-font-stack */
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
+    'Helvetica Neue', Arial, sans-serif;
+  height: 100%;
+  margin: 0;
+  /*background:#86A7CB;*/
+}
+* {box-sizing: border-box;}
+/*Font Family*/
+p, article {
+  font-family: Arial, Helvetica, sans-serif;
+}
+.navbar, .navbar-brand, .bg-text {
+    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'fp-1',cursive;;
+}
+#heading1, #heading2, #heading3, #heading4 {
+  font-family: 'Nanum Pen Script', cursive;
+}
+/*Font-Size*/
+div.carousel-caption {
+  font-size: 1.8rem;
+}
+p, #about-us, #repairs, #nt {
+  font-size: 2rem;
+}
+.navbar, #header-img  {
+  font-size: 2.5rem;
+  
+}
+#heading1, #heading2, #heading3, #heading4 {
+  font-size: 5rem;
+}
+.bg-text {
+  font-size:4rem;
+}
+.navbar:hover {
+}
+.navbar-toggler:hover {
+}
+/*Colors*/
+#heading1, #heading2, #heading4 { 
+  color: rgba(0,0,0, 0.8);
+}
+#heading3 {
+  color: rgba(0,0,0,0.5);
+}
+#header-img {
+  color:rgb(0,0,0);
+}
+div.carousel-caption, .author {
+  color:white;
+}
+/*Background Colors*/
+#box2, #boxcon {
+  background:#f8f9fa;
+}
+.navbar, #footer  {
+  background:#86A7CB;
+}
+/*text align*/
+#heading1, #heading2, #heading3, #heading4, .bg-text, #boxcon {
+  text-align: center;
+  
+}
+/*Full screen pictures*/
+.bg-image {
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+/* Images used */
+.img1 { background-image: url("bike-pics/shutterstock_1711806700.jpg"); }
+.img2 { background-image:  url("bike-pics/pexels-jahangeer-bm-1619299.jpg");}
+.img3 { background-image: url("bike-pics/shutterstock_1073210885.jpg");}
+
+
+/* Position text in the middle of the page/image */
+.bg-text {
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+  color: rgba(255,255,255, 0.8); 
+  font-weight: bold;
+  border: 10px solid rgba(255,255,255, 0.5); 
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index:3;
+  width: 350px;
+  padding: 20px;
+}
+.text1{
+  top: 50%;
+}
+.text2{
+  top: 150%;
+}
+.text3{
+  top: 250%;
+}
+#box2 {
+  padding:40px 10px;
+}
+
+#heading1 {
+  padding-top: 10px;
+  grid-area: about-head;
+}
+#about-us {
+  padding:10px 10px;
+  line-height:3rem;
+  grid-area: about-us;
+}
+#how-it-works {
+  display: flex;
+  justify-content: center;
+  grid-area: film;
+  padding:30px 0px;
+}
+#how-it-works > iframe {
+  height:270px;
+  width: 360px;
+  border: 1px solid #BFBFBF;
+  background-color: white;
+  box-shadow: 10px 10px 5px #aaaaaa;  
+}
+#heading2 {
+  grid-area: repair-head;
+}
+#repairs {
+  padding:10px 10px;
+  line-height:3rem;
+  grid-area: repair;
+}
+.images-with-shadow {
+  width: 100%;
+  margin:auto;
+  display: block;
+  border: 1px solid #BFBFBF;
+  background-color: white;
+  box-shadow: 10px 10px 5px #aaaaaa; 
+}
+#image1 {
+  max-width: 400px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  grid-area: pic; 
+}
+#image2 {
+max-width: 300px;
+margin-top: 30px;
+margin-bottom: 30px;
+grid-area: pic-2; 
+}
+#image3 {
+max-width: 300px;
+margin-top: 30px;
+margin-bottom: 30px;
+display: block;
+grid-area: pic-3; 
+}
+#boxcar {
+  padding:40px 10px;
+}
+#boxcar {
+  width:100%;
+  background-image: url("bike-pics/pexels-flo-maderebner-623919.jpg");
+  /* Full height */
+  height: 60%;
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.caro {
+  padding-top:20px;
+}
+#boxcon {
+  padding-top: 40px;
+  height: 300px;
+}
+#tel {
+  padding-top: 40px;
+}
+#em {
+  padding-top: 20px;
+}
+#footer {
+  height: 50px;
+}
+
+
+@media (min-width: 460px) {
+  #how-it-works > iframe {
+  height:300px;
+  width: 400px;
+  }
+}
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  #box2 {
+    padding:40px 20px;
+   }
+  .rotate_left {
+  -ms-transform: rotate(-7deg); /* IE 9 */
+  -webkit-transform: rotate(-7deg); /* Safari */
+  transform: rotate(-7deg);
+  }
+  .rotate_right {
+  -ms-transform: rotate(7deg); /* IE 9 */
+  -webkit-transform: rotate(7deg); /* Safari */
+  transform: rotate(7deg);
+  }  
+  div.carousel-caption {
+   font-size: 2rem;
+  }
+  
+}
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  #box2 {
+    padding:40px 50px;
+  }
+}
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  #box2 {
+    display: grid;
+    grid-template-areas:
+    'about-head about-head'
+    'about-us film'
+    'repair-head repair-head'
+    'repair pic'
+    'pic-2 pic-3';
+   grid-template-columns: 450px 450px;
+   grid-gap: 20px;
+   justify-content:center;
+   
+  }
+}
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  #box2 {
+    display: grid;
+    grid-template-areas:
+    'about-head about-head'
+    'about-us film'
+    'repair-head repair-head'
+    'repair pic'
+    'pic-2 pic-3';
+   grid-template-columns: 450px 450px;
+   grid-gap: 20px;
+   justify-content:center;
+   align-items: center;
+  }
+}
