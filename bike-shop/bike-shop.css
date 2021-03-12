@@ -207,7 +207,7 @@ grid-area: pic-3;
 }
 
 
-@media (min-width: 460px) {
+@media (max-width: 460px) {
   #how-it-works > iframe {
   height:225px;
   width: 300px;
