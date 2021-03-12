@@ -135,8 +135,8 @@ div.carousel-caption, .author {
   padding:30px 0px;
 }
 #how-it-works > iframe {
-  height:270px;
-  width: 360px;
+  height:225px;
+  width: 300px;
   border: 1px solid #BFBFBF;
   background-color: white;
   box-shadow: 10px 10px 5px #aaaaaa;  
@@ -206,15 +206,12 @@ grid-area: pic-3;
   height: 50px;
 }
 
-
-@media (max-width: 460px) {
-  #how-it-works > iframe {
-  height:225px;
-  width: 300px;
-  }
-}
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
+   #how-it-works > iframe {
+  height:225px;
+  width: 300px;
+  }      
   #image1 {
   max-width: 400px;
   
