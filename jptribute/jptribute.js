@@ -1,5 +1,5 @@
 var r = document.querySelector(':root');
-var g1 = "8x13";
+var g1 = "8x15";
 var s1 = "12.5vw";
 var g2 = "10x10";
 var s2 = "10vw";
