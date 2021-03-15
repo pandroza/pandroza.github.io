@@ -32,7 +32,6 @@ a {
 color: #477ca7;
 }
 .header {
-display:grid;
 position:relative;
 width:100%;
 
@@ -141,7 +140,7 @@ text-decoration: none;
   
 }
 #about4 {
-  padding-top:0px;
+  padding-top:20px;
   
 }
 p {
