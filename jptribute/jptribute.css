@@ -124,7 +124,6 @@ color:#333;
 text-decoration: none;
 }
 #about, #about2, #about3, #about4 {
-  margin:0px; 
   font-family: 'Fredoka One', cursive;
   font-family: 'Indie Flower', cursive;
   font-size: 3.5rem;
@@ -218,7 +217,7 @@ width:320px;
     }
     h3, #about, #about2 {
     font-size:3rem;
-       justify-content:center;
+      
     }
     #about {
     margin-top:40px;
