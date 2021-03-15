@@ -35,7 +35,7 @@ color: #477ca7;
 display:grid;
 position:relative;
 width:100%;
-align-items: center;
+
 justify-content: center;
 cursor: pointer;
 grid-area: header;
@@ -125,6 +125,7 @@ color:#333;
 text-decoration: none;
 }
 #about, #about2, #about3, #about4 {
+  margin:0px; 
   font-family: 'Fredoka One', cursive;
   font-family: 'Indie Flower', cursive;
   font-size: 3.5rem;
