@@ -137,13 +137,13 @@ text-decoration: none;
 }
 #about3 {
    position:relative;
-   bottom:20px;
+   bottom:15px;
   padding-top:0px;
   
 }
 #about4 {
    position:relative;
-   bottom:20px;
+   bottom:15px;
   padding-top:20px;
   
 }
@@ -218,6 +218,7 @@ width:320px;
     }
     h3, #about, #about2 {
     font-size:3rem;
+       justify-content:center;
     }
     #about {
     margin-top:40px;
