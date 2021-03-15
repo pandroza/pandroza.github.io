@@ -136,10 +136,14 @@ text-decoration: none;
   display:none;
 }
 #about3 {
+   position:relative;
+   bottom:20px;
   padding-top:0px;
   
 }
 #about4 {
+   position:relative;
+   bottom:20px;
   padding-top:20px;
   
 }
