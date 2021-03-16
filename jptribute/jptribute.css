@@ -125,9 +125,9 @@ text-decoration: none;
 }
 #about, #about2, #about3, #about4 {
   font-family: 'Fredoka One', cursive;
-  font-family: 'Indie Flower', cursive;
-  font-size: 3.5rem;
-  font-weight:100;
+  /*font-family: 'Indie Flower', cursive;*/
+  font-size: 3rem;
+  /*font-weight:100;*/
   
  
 }
