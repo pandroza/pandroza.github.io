@@ -3,160 +3,118 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="Web Developer Site">
+        <meta name="description" content="Front End Web Developer Site">
         <meta name="keywords" content="Pandroza, Web Developer">
         <meta name="author" content="Ross Norwood">
         <title>Pandroza Front End Web Developer</title>
-        <head>
-        <!-- Place your kit's code here -->
+        
+    
+         <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet"> 
+        
+        <link href="Hexaflip-master/hexaflip.css" rel="stylesheet" type="text/css">
+      
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+         <link href="home.css" rel="stylesheet">
         <script src="https://kit.fontawesome.com/c818ba25ab.js" crossorigin="anonymous"></script>
-        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/p5@1.1.4/lib/p5.min.js"></script>
-
-        <head>
-        <style>
-
-        @font-face {
-        font-family: 'fp-1998';
-
-        src:url(strangeheadache.ttf) format('truetype');
-        }
-        html {
-        /* Setting a base font size of 10px give us easier rem calculations
-          Info: 1rem === 10px, 1.5rem === 15px, 2rem === 20px and so forth
-           */
-          font-size: 10px;
-          height: 100%;
-          margin: 0;
-        }
-
-        body{
-          background-color:cornflowerblue;
-        }
-
-        .header {
-          background-color: cornflowerblue;
-          padding: 20px;
-          color:black;
-          font-family:'fp-1998';
-          text-align: center;
+       
+        <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+     <script src="https://unpkg.com/css-doodle@0.13.1/css-doodle.min.js"></script>
 
 
-        }
-        h1{
-          font-size:3.5rem;
-          letter-spacing: 14px;
-          
-        }
-        /*HIEROGLYPH CLOCK*/
-        #clock {
-          display: grid;
-          grid-template-columns: 40px 40px 40px 40px 40px 40px;
-          justify-content: center;
-          grid-gap: 10px;
-        }
+        
+       
+         </head>
+        <css-doodle use="var(--rule1)"class="my-doodle"></css-doodle>
+<body onload="myFunction()" style="margin:0;">
 
-        h3{
-          font-size:3rem;
-          letter-spacing: 14px;
-          text-transform: uppercase;
-          margin-top: 0px;
-        }
-        #us-heading {
-          margin-top: 50px;
-        }
-        /*CLOCK ICONS*/
-        i#icon {
-          font-size: 3rem;
-        }
-        /*LINKS*/
-        a {
-          color:black;
-        }
-        a:hover {
-          color:white;
-        }
+  <div id="loader"></div>
+  <div style="display:none;" id="myDiv" class="animate-bottom">
+    <nav id="navbar" class="navbar navbar-expand-md bg-light navbar-light fixed-top">
 
-        /* Extra small devices (phones, 600px and down) */
-        @media only screen and (max-width: 440px) {}
-        @media only screen and (min-width: 500px) {}
+      <a class="navbar-brand" id="header-img" href="#">PANDROZA.NET</a>
 
-        /* Small devices (portrait tablets and large phones, 600px and up) */
-        @media only screen and (min-width: 600px) {}
-        /* Medium devices (landscape tablets, 768px and up) */
-        @media only screen and (min-width: 768px) {
-          h1{
-          font-size:5rem;
-          letter-spacing: 14px;
-          } 
-          #clock {
-          display: grid;
-          grid-template-columns: 50px 50px 50px 50px 50px 50px;
-          justify-content: center;
-          grid-gap: 15px;
-          }  
-           /*CLOCK ICONS*/
-          i#icon {
-          font-size: 4rem;
-          }  
-          
-        }
-        /* Large devices (laptops/desktops, 992px and up) */
-        @media only screen and (min-width: 992px) {
-          #us-heading {
-          margin-top: 100px;
-          }
-          h3{
-          margin-top: 50px;
-          }
-        }
-        /* Extra large devices (large laptops and desktops, 1200px and up) */
-        @media only screen and (min-width: 1200px) {}
-            
-        </style>
-        <head>
+      <button class="navbar-toggler" id="nt" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="#welcome-section">HOME</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#my-pro">PROJECTS</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#box2">CONTACT</a>
+          </li>
 
-        </head>
-        <body>
-
-        <div class="header">
-
-          <h1>PANDROZA.COM</h1>
-
-
-          <div id="clock"><i id="icon"class="fab fa-android fa-1x"></i><i id="icon"class="fab fa-android fa-1x"></i>
-         <i id="icon"class="fab fa-android fa-1x"></i><i id="icon"class="fab fa-android fa-1x"></i>
-         <i id="icon"class="fab fa-android fa-1x"></i><i id="icon"class="fab fa-android fa-1x"></i></div>
-
-            <h3 id="us-heading"><a href="jptribute">john peel site</a></h3>
-            <h3><a href="guitar-lessons">guitar lessons site</a></h3>
-            <h3><a href="hexaflip-master/hexaflip-master/">Hexa</a></h3>
+        </ul>
+      </div>
+    </nav>
+    <div id="welcome-section">
+      <div id="ws-text">
+        <h1>PANDROZA.NET</h1>
+        <div id="clock"><i id="icon" class="fab fa-android fa-1x"></i><i id="icon" class="fab fa-android fa-1x"></i>
+          <i id="icon" class="fab fa-android fa-1x"></i><i id="icon" class="fab fa-android fa-1x"></i>
+          <i id="icon" class="fab fa-android fa-1x"></i><i id="icon" class="fab fa-android fa-1x"></i>
         </div>
 
-        <script>
-          var iEls = document.getElementsByTagName("i");
-          var spEls = document.getElementsByTagName("span");
-          var iconArr = ["fas fa-atom fa-1x", "fas fa-dragon fa-1x", "fas fa-kiwi-bird fa-1x", "fas fa-flask fa-1x", "fas fa-ghost fa-1x",
-          "fas fa-dungeon fa-1x", "fas fa-eye fa-1x", "fas fa-meteor fa-1x", "fas fa-yin-yang fa-1x", "fas fa-pastafarianism fa-1x"];
-          var rotate = 270;
-        function draw() {
-          let s1 = map(second(), 0, 60, 0, 6);
-          let s2 = floor(s1);
-          let s3 = second();
-          let m1 = map(minute(), 0, 60, 0, 6);
-          let m2 = floor(m1);
-          let m3 = minute();
-          let h1 = map(hour(), 0, 24, 0, 2.4);
-          let h2 = floor(h1);
-          let h3 = hour();
-          iEls[0].className = iconArr[h2];
-          iEls[1].className = iconArr[h3 - 10*h2];
-          iEls[2].className = iconArr[m2];
-          iEls[3].className = iconArr[m3 - 10*m2];
-          iEls[4].className = iconArr[s2];
-          iEls[5].className = iconArr[s3 - 10*s2];
+        <h2 id="top-heading">Front End Web Developer Based in West London</h2>
+        <h2 id="top-heading2">Skilled in <span>HTML</span>, <span>CSS</span>, <span>JAVASCRIPT</span>, <span>JQUERY</span>, <span>BOOTSTRAP</span>, <span>SQL</span>, and <span>REACT</span></h2>
+      </div>
+    </div>
+    <div id="about-section"> <div id="about-text"><h2 id="about-heading">About Me</h2><p id ="about-para">Welcome to my site. My name's Ross. I live in sunny Ealing, West London and have been teaching myself coding online since 2019. My first project was a text adventure based on post-apocalyptic video game Fallout, written in Python. Since then I've taken courses on Kaggle for machine learning and data science. I've completed the curriculum on Khan Academy for HTML, CSS and JavaScript and right now I'm working through freeCodeCamp's set of courses. Below you'll find a showcase of my most recent projects, as well as links to my profiles on CodePen and GitHub.</p></div></div>
+    <div id="profile-section">
+                      <div id="my-angle1">
+                        <svg viewBox="0 0 400 40" width="100%" preserveAspectRatio="none">
+                          <polygon class="corner" points="400,0 400,40 0,40"></polygon>
+                        </svg>
+                      </div>
+                <div id="projects">
+                     <div id="hex-box">
+                       <h3 id="pro-heading">My Projects</h3>
+                       <i id="icon1" class="fa fa-arrow-circle-left" aria-hidden="true"></i>
+                       <i id="icon2" class="fa fa-arrow-circle-right" aria-hidden="true"></i>
+                       <div id="my-hex" class="demo"></div>
+                      </div>
+                  
+                      <div class="project-about">
+                        
+                          <h3 id="ph1">John Peel Tribute Page</h3>
+                          <div id="para-link">
+                            <p id="page-para">Made with HTML, CSS and JavaScript. A tribute page to the influential DJ John Peel. It has a choice of animated backgrounds, some interactive, created with <a id=\"link1\" href = \"https://css-doodle.com/\">CSS-Doodle.</a> Click 'change theme' and background and styles change. Site is responsive and mobile friendly. Site layout changes on different screen sizes. Also contain selection of links to related YouTube content which you can play inside site.</p><a id="links" href="john-peel">Go to page</a>
+                         </div>
+                       
+                     </div>
+                  </div>
+                  <div id="my-angle2">
+                    <svg viewBox="0 0 400 40" width="100%" preserveAspectRatio="none">
+                      <polygon class="corner" points="400,0 400,40 0,0"></polygon>
+                    </svg>
+                  </div>
+          
+      
+    
+      </div>
+        <div id="footer">
+           <div id="footer-text">
+          <h3 id="lets">FOR HELP BUILDING YOUR WEBSITE, OR ANY OTHER PROJECTS, CONTACT ME</h3>
+          <h3><a id="tel" href="tel:+4407526034584">TEL: +44 07526 034 584</a></h3><br>
+             <h3 id = "my-email"><a id="em" href="mailto:pandroza82@gmail.com">EMAIL: <span id = "email-text">pandroza82@gmail.com</span></a></h3><br><br>
+          <h3><a id="profile-link2" class="profile-links" target="_blank" href=""><i class="fa fa-free-code-camp fa-2x" aria-hidden="true"></i></a><a id="profile-link" class="profile-links" target="_blank" href="https://github.com/pandroza"><i class="fa fa-github-square fa-2x" aria-hidden="true"></i></a><a id="profile-link3"  class="profile-links" target="_blank" href="https://codepen.io/pandroza"><i class="fa fa-codepen fa-2x" aria-hidden="true"></i></a></h3>
+          </div>
+          <div id="footer-foot"><h3 id = "by">Site by pandroza using <a id="profile-link4"  class="site-links" target="_blank" href="https://oxism.com/hexaflip/">Hexaflip</a> and <a id="profile-link5"  class="site-links" target="_blank" href="https://css-doodle.com/">CSS-Doodle</a></h3></div>
+        </div>
+      
+     
+        
 
-          }
-             </script>
+        
+        
+            
 
 
 
@@ -165,4 +123,7 @@
 
 
 </body>
+ <script src="Hexaflip-master/hexaflip.js"></script>
+        
+        <script src="home.js?v=Mathrandom()"></script>
 </html>
