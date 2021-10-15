@@ -52,7 +52,7 @@ var images = ['./FA-icons/johnpeel5.png',
                 './FA-icons/canyon.png',
                 './FA-icons/survey.png',
                 './FA-icons/technic.png',
-                './FA-icons/octocat(2).png',
+                './FA-icons/floaty-octocat.png',
                 './FA-icons/thispage.png'
             ];
 var myHex;
